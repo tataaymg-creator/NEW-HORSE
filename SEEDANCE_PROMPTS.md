@@ -17,19 +17,23 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 - **Real slow motion.** One tempo, stated in seconds, applies to the legs, mane, dust and light alike. When only the legs are slowed and the hair is frozen (or the other way round), it reads as fake.
 - **Weight and travel.** The hooves plant and grip, the body rises and falls, and the ground streams past, so he travels through space rather than galloping on a treadmill.
 
+## Revisions
+
+- **v2, after the shot 05 take.** Motion and turn were approved. The take invented a row of arena windows with a steel roof along the top of frame (0–1.5 s and 7.7–8.0 s) and a sand clod that turned into a tiny human figure (about 7.2–7.7 s). Shots 05–11 now describe the background as a black void with only sun shafts and dust (no "covered arena", no "high openings"), say the sand is only grains, clods and dust, and lock the top of the frame to black. Shots 03 and 04 are approved takes, so their text is unchanged.
+
 ## Shot list
 
 | Shot | What it is for | Seconds | Attach | Prompt length |
 |---|---|---|---|---|
 | 03 | Medium: head, neck, chest and forelegs, galloping | 8 | `HH_S03_v01.png`, `gallop_side_ref.mp4` | 894 words / 5073 chars |
 | 04 | Very close: head and neck, galloping | 14 | `HH_S04_v01.png`, `HH_S04_blocking_preview.mp4`, `gallop_side_ref.mp4` | 941 words / 5273 chars |
-| 05 | The turn: gallops in, spins 180°, gallops off the other way | 8 | `HH_S05_v01.png`, `HH_S05_0001-0192.mp4`, `gallop_side_ref.mp4` | 1028 words / 5822 chars |
-| 06 | Wide: three horses chase him while he leads | 8 | `HH_S06_v01.png`, `HH_S06_0001-0192.mp4`, `gallop_side_ref.mp4` | 912 words / 5288 chars |
-| 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 937 words / 5272 chars |
-| 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 1070 words / 6026 chars |
-| 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 818 words / 4627 chars |
-| 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 831 words / 4675 chars |
-| 11 | He gallops straight at the camera, head-on | 25 | `HH_S11_v01.png`, `HH_S11_0001-0600.mp4`, `gallop_side_ref.mp4` | 1017 words / 5750 chars |
+| 05 | The turn: gallops in, spins 180°, gallops off the other way | 8 | `HH_S05_v01.png`, `HH_S05_0001-0192.mp4`, `gallop_side_ref.mp4` | 1115 words / 6297 chars |
+| 06 | Wide: three horses chase him while he leads | 8 | `HH_S06_v01.png`, `HH_S06_0001-0192.mp4`, `gallop_side_ref.mp4` | 993 words / 5715 chars |
+| 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 1015 words / 5676 chars |
+| 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 1146 words / 6416 chars |
+| 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 894 words / 5017 chars |
+| 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 907 words / 5065 chars |
+| 11 | He gallops straight at the camera, head-on | 25 | `HH_S11_v01.png`, `HH_S11_0001-0600.mp4`, `gallop_side_ref.mp4` | 1092 words / 6141 chars |
 
 ## Shot 03 — Medium: head, neck, chest and forelegs, galloping — 8 s
 
@@ -135,7 +139,7 @@ KEEP CONSISTENT
 HH SHOT 05 — 8 s, 21:9 (2.33:1), one continuous slow-motion shot. Full-figure shot: the grey stallion gallops in screen-right, spins 180° toward the camera and gallops off screen-left.
 
 REFERENCES
-@HH_S05_v01 — the look, and the exact frame at 4.4–4.8s (head-on, mid-turn). NOT the first frame.
+@HH_S05_v01 — the look, including its background (black void, sun shafts, dust), and the exact frame at 4.4–4.8s (head-on, mid-turn). NOT the first frame.
 @HH_S05_0001-0192 — Blender blocking, ONLY for his position and size in frame, which way he faces at each moment, and when the turn happens. Ignore its look, rig lines, grid, grey studio and stride speed.
 @gallop_side_ref — real gallop, side view: ONLY the leg mechanics and the tempo. Match it in both directions. Ignore its look and background.
 
@@ -144,7 +148,7 @@ Grey Iberian stallion: heavy arched neck, deep chest; near-white coat with fine 
 
 CAMERA
 Lens at chest height, 29° field of view, full-figure frame: ears near the top edge, hooves near the bottom edge. The camera travels with him and holds him in the same part of the frame: it tracks right with him, eases to a stop through the turn, then tracks left with him, only a faint organic float. Focus follows his eye.
-THE VERY FIRST FRAME: full-figure side profile, galloping screen-right mid-stride, body in the left half of the frame, head at about 60% of the frame width; the dark arena with sun shafts behind him, sand floor along the bottom; the look of @HH_S05_v01.
+THE VERY FIRST FRAME: full-figure side profile, galloping screen-right mid-stride, body in the left half of the frame, head at about 60% of the frame width; behind him black darkness with sun shafts and dust, exactly like the background of @HH_S05_v01; sand floor along the bottom.
 
 ACTION
 0.0–3.0s — He gallops screen-right, a little over one and a half strides, head at about 60% of the width, mane and tail streaming left; the shafts slide left behind him.
@@ -157,7 +161,7 @@ GALLOP
 The real four-beat gallop of @gallop_side_ref: hind hooves land one after the other, then the forelegs, the leading foreleg reaching far forward, then a moment of suspension with all four legs gathered under the belly. Once per stride the body rises and falls and the head and neck dip as the forelegs land. Hooves plant, grip and leave deep prints. Muscles ripple under the skin, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels: the sand streams past under him.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back to the left before the turn and back to the right after it, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back to the left before the turn and back to the right after it, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. While the camera tracks right the shafts slide left with depth parallax; through the turn they slow and stop; after it they slide right. The sand fan from the turn rises into the beams and makes them flare and churn. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -166,7 +170,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -175,9 +179,11 @@ KEEP CONSISTENT
 - He turns toward the camera, never away from it; one 180° turn, nothing more.
 - Before the turn his head is at about 60% of the width; after it, at about 40%.
 - Full figure all shot: ears and hooves stay in frame.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 06 — Wide: three horses chase him while he leads — 8 s
@@ -194,7 +200,7 @@ THE HERO HORSE (the leading grey)
 Grey Iberian stallion: heavy arched neck, deep chest; near-white coat with fine dark flea-bitten freckles, dark slate-grey muzzle, dark brown eyes, long thick wavy silver-white mane and forelock, full silver-white tail, lower legs shading to dark grey, black hooves. Bare, no tack. 100% matches the reference.
 
 CAMERA
-Lens low at the height of their chests, 29° field of view, travelling left alongside the group at their speed (about 45 km/h) while slowly pulling back: over the 8 s the horses shrink to about 85% of their first-frame size, and more dark arena opens above them and more sand below. Faint organic float. Focus on the hero.
+Lens low at the height of their chests, 29° field of view, travelling left alongside the group at their speed (about 45 km/h) while slowly pulling back: over the 8 s the horses shrink to about 85% of their first-frame size, and more black darkness with sun shafts opens above them and more sand below. Faint organic float. Focus on the hero.
 FRAMING: the hero leads at the far left, his nose at about 13% of the frame width, his body across the left third; the second grey overlaps his hindquarters; the dark bay and the bright bay follow to the right edge. The sun shafts fall from the upper left.
 
 ACTION
@@ -206,7 +212,7 @@ GALLOP
 The real four-beat gallop of @gallop_side_ref: hind hooves land one after the other, then the forelegs, the leading foreleg reaching far forward, then a moment of suspension with all four legs gathered under the belly. Once per stride each body rises and falls and the head and neck dip as the forelegs land. Hooves plant, grip and leave deep prints. Muscles ripple under the skin, the skin shudders on each landing, nostrils flare with one breath per stride. They truly travel: the sand streams past under them.
 
 WIND, MANE, DUST
-The rush of air from their speed plus a gusting wind. Every mane streams in thick separate locks back toward screen-right, rippling in waves from crest to tips, each wave half a beat behind the dip of its head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. Forelocks flutter. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind them and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around them, thin haze far back in the dark.
+The rush of air from their speed plus a gusting wind. Every mane streams in thick separate locks back toward screen-right, rippling in waves from crest to tips, each wave half a beat behind the dip of its head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. Forelocks flutter. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind them and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around them, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The camera travels, so the shafts slide toward screen-right with depth parallax, near ones faster than far ones. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on their faces and bodies breathes as the dust in front of the sun thickens and thins.
@@ -215,7 +221,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. They run on loose, churned brown sand. Behind them the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -224,9 +230,11 @@ KEEP CONSISTENT
 - The hero leads at the far left for the whole shot; order and spacing never change; nobody overtakes.
 - Exactly four horses: two greys, one dark bay, one bright bay.
 - Every mane and tail streams right and moves in every frame.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; the four horses are the only living things in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 07 — Very close: two heads, he leads and the dark bay falls behind — 14 s
@@ -255,7 +263,7 @@ GALLOP
 Below the frame his legs run the real four-beat gallop of @gallop_side_ref, and its rhythm drives everything in frame: once per stride the head and neck dip as the forelegs land and lift in the moment of suspension. Muscles ripple under the skin of neck and jaw, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels forward through the space.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-right, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-right, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The camera travels, so the shafts slide toward screen-right with depth parallax, near ones faster than far ones. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -264,7 +272,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -272,9 +280,11 @@ Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per
 KEEP CONSISTENT
 - Both gallop screen-left; the hero stays in front, nearest the camera, in the same place all shot.
 - The dark bay only drops back to the right; it never passes him; it is gone by 11.0s.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; the two horses are the only living things in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 08 — The turn back: shot 5 mirrored — 11 s
@@ -306,7 +316,7 @@ GALLOP
 The real four-beat gallop of @gallop_side_ref: hind hooves land one after the other, then the forelegs, the leading foreleg reaching far forward, then a moment of suspension with all four legs gathered under the belly. Once per stride the body rises and falls and the head and neck dip as the forelegs land. Hooves plant, grip and leave deep prints. Muscles ripple under the skin, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels: the sand streams past under him.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back to the right before the turn and back to the left after it, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back to the right before the turn and back to the left after it, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. While the camera tracks left the shafts slide right with depth parallax; through the turn they slow and stop; after it they slide left. The sand fan from the turn rises into the beams and makes them flare and churn. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -315,7 +325,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -324,9 +334,11 @@ KEEP CONSISTENT
 - He turns toward the camera, never away from it; one 180° turn, nothing more.
 - Before the turn his head is at about 40% of the width; after it, at about 60%.
 - From 4.0s to the end he is full figure: ears and hooves stay in frame.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 09 — Very close: head and neck, galloping — 7 s
@@ -355,7 +367,7 @@ GALLOP
 Below the frame his legs run the real four-beat gallop of @gallop_side_ref, and its rhythm drives everything in frame: once per stride the head and neck dip as the forelegs land and lift in the moment of suspension. Muscles ripple under the skin of neck and jaw, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels forward through the space.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-left, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-left, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The camera travels, so the shafts slide toward screen-left with depth parallax, near ones faster than far ones. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -364,7 +376,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -372,9 +384,11 @@ Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per
 KEEP CONSISTENT
 - He gallops screen-right for the whole shot; his eye stays at about 37% of the frame width.
 - The right half of the frame stays open dark space ahead of him.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 10 — Very close: the face and eye — 8 s
@@ -403,7 +417,7 @@ GALLOP
 Below the frame his legs run the real four-beat gallop of @gallop_side_ref, and its rhythm drives everything in frame: once per stride the head and neck dip as the forelegs land and lift in the moment of suspension. Muscles ripple under the skin of neck and jaw, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels forward through the space.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-left, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-left, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The camera travels, so the shafts slide toward screen-left with depth parallax, near ones faster than far ones. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -412,7 +426,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -420,9 +434,11 @@ Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per
 KEEP CONSISTENT
 - He gallops screen-right for the whole shot; the eye stays at about 39% of the frame width.
 - The push-in is slow and steady; the eye stays sharp from first frame to last.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
 
 ## Shot 11 — He gallops straight at the camera, head-on — 25 s
@@ -431,7 +447,7 @@ KEEP CONSISTENT
 HH SHOT 11 — 25 s, 21:9 (2.33:1), one continuous slow-motion shot. Head-on: the grey stallion gallops straight at the camera, centred, the same size for the whole shot.
 
 REFERENCES
-@HH_S11_v01 — THE FIRST FRAME of the clip and the look: the horse head-on, centred, full figure, the dark sand arena, the sun shafts behind him, the dust, the grade. Framing exactly as this image.
+@HH_S11_v01 — THE FIRST FRAME of the clip and the look: the horse head-on, centred, full figure, the black background, the sun shafts behind him, the dust, the grade. Framing exactly as this image.
 @HH_S11_0001-0600 — Blender blocking, ONLY for his position and size in frame: centred, the same size for all 25 s. Ignore its look, rig lines, grid, grey studio and stride speed.
 @gallop_side_ref — real gallop, side view: ONLY the leg mechanics and the tempo. Same mechanics, seen from the front. Ignore its look and background.
 
@@ -455,7 +471,7 @@ GALLOP
 The real four-beat gallop of @gallop_side_ref: hind hooves land one after the other, then the forelegs, the leading foreleg reaching far forward, then a moment of suspension with all four legs gathered under the belly. Once per stride the body rises and falls and the head and neck dip as the forelegs land. Hooves plant, grip and leave deep prints. Muscles ripple under the skin, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels: the sand streams past under him.
 
 WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back and out to both sides of his neck, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back and out to both sides of his neck, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
 The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The shafts stand across his path like pillars of light in the dust; with the camera retreating they drift slowly, and the dust he throws keeps churning through them. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
@@ -464,7 +480,7 @@ TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
 
 LOOK
-Photoreal live-action commercial. Dark covered sand arena, loose churned brown sand, background falling to deep black. Low late sun, warm 3500K, from high openings above and behind him, cutting long volumetric shafts through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
 
 SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
@@ -472,7 +488,9 @@ Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per
 KEEP CONSISTENT
 - He gallops straight at the lens for all 25 s: centred, the same size, ears and hooves in frame.
 - The sun shafts stay behind him and across his path; he passes through two of them.
+- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
+- The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.
-- One continuous shot, no cuts. No text, no people, no tack.
+- One continuous shot, no cuts, no on-screen text.
 ```
