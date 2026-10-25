@@ -8,6 +8,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 - **Attach the files listed for the shot as references.** The handles in the prompt are the file names. If Higgsfield shows a different tag for an upload, swap it in the text.
 - **First frame.** For shots 03, 04, 06, 07, 09, 10 and 11 the still is the first frame. **Shot 05** has no start still: `HH_S05_v01` is the head-on frame in the middle of the turn, so attach it as a reference, not as the start frame. **Shot 08** starts on `HH_S08_start_v01`; `HH_S08_v01` is the mid-turn reference.
 - **Blender viewports** are referenced only for where the horse sits in frame and how big he is. Each prompt says to ignore their look, rig lines, grid and speed.
+- **Higgsfield caps attached reference video at 30 s in total per generation.** Every shot here is under it (the Video refs column). Shot 11 uses the 5 s lock `HH_S11_0001-0120` (frames 1–120 of `HH_S11_0001-0600`; the horse is the same size in all 600 frames).
 - **`gallop_side_ref`** drives the leg mechanics and the tempo. It measures **one full stride every 1.8 s** (54 frames at 30 fps), about 4× real-time slow motion. Every shot uses that tempo so the cut holds together.
 
 ## What changed against the fake look
@@ -21,20 +22,21 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 
 - **v2, after the shot 05 take.** Motion and turn were approved. The take invented a row of arena windows with a steel roof along the top of frame (0–1.5 s and 7.7–8.0 s) and a sand clod that turned into a tiny human figure (about 7.2–7.7 s). Shots 05–11 now describe the background as a black void with only sun shafts and dust (no "covered arena", no "high openings"), say the sand is only grains, clods and dust, and lock the top of the frame to black. Shots 03 and 04 are approved takes, so their text is unchanged.
 - **v3, shot 11 ending.** From 20 s his hooves throw bigger sprays at the lens; at 22 s a gust drives the whole dust cloud forward over and around him; by 24 s the dust has swallowed him; 24–25 s is a frame completely filled with glowing, moving dust, which you can cut or dissolve out of.
+- **v4, shot 11 reference length.** 25 s lock + 8.3 s gallop ref went over Higgsfield's 30 s limit for attached video. The lock is now `HH_S11_0001-0120` (5 s), 13.3 s in total.
 
 ## Shot list
 
-| Shot | What it is for | Seconds | Attach | Prompt length |
-|---|---|---|---|---|
-| 03 | Medium: head, neck, chest and forelegs, galloping | 8 | `HH_S03_v01.png`, `gallop_side_ref.mp4` | 894 words / 5073 chars |
-| 04 | Very close: head and neck, galloping | 14 | `HH_S04_v01.png`, `HH_S04_blocking_preview.mp4`, `gallop_side_ref.mp4` | 941 words / 5273 chars |
-| 05 | The turn: gallops in, spins 180°, gallops off the other way | 8 | `HH_S05_v01.png`, `HH_S05_0001-0192.mp4`, `gallop_side_ref.mp4` | 1115 words / 6297 chars |
-| 06 | Wide: three horses chase him while he leads | 8 | `HH_S06_v01.png`, `HH_S06_0001-0192.mp4`, `gallop_side_ref.mp4` | 993 words / 5715 chars |
-| 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 1015 words / 5676 chars |
-| 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 1146 words / 6416 chars |
-| 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 894 words / 5017 chars |
-| 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 907 words / 5065 chars |
-| 11 | He gallops straight at the camera, head-on | 25 | `HH_S11_v01.png`, `HH_S11_0001-0600.mp4`, `gallop_side_ref.mp4` | 1290 words / 7220 chars |
+| Shot | What it is for | Seconds | Attach | Video refs | Prompt length |
+|---|---|---|---|---|---|
+| 03 | Medium: head, neck, chest and forelegs, galloping | 8 | `HH_S03_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 894 words / 5073 chars |
+| 04 | Very close: head and neck, galloping | 14 | `HH_S04_v01.png`, `HH_S04_blocking_preview.mp4`, `gallop_side_ref.mp4` | 17.9 s | 941 words / 5273 chars |
+| 05 | The turn: gallops in, spins 180°, gallops off the other way | 8 | `HH_S05_v01.png`, `HH_S05_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1115 words / 6297 chars |
+| 06 | Wide: three horses chase him while he leads | 8 | `HH_S06_v01.png`, `HH_S06_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 993 words / 5715 chars |
+| 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 22.3 s | 1015 words / 5676 chars |
+| 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 1146 words / 6416 chars |
+| 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 894 words / 5017 chars |
+| 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 907 words / 5065 chars |
+| 11 | He gallops straight at the camera, head-on | 25 | `HH_S11_v01.png`, `HH_S11_0001-0120.mp4`, `gallop_side_ref.mp4` | 13.3 s | 1293 words / 7240 chars |
 
 ## Shot 03 — Medium: head, neck, chest and forelegs, galloping — 8 s
 
@@ -449,7 +451,7 @@ HH SHOT 11 — 25 s, 21:9 (2.33:1), one continuous slow-motion shot. Head-on: th
 
 REFERENCES
 @HH_S11_v01 — THE FIRST FRAME of the clip and the look: the horse head-on, centred, full figure, the black background, the sun shafts behind him, the dust, the grade. Framing exactly as this image.
-@HH_S11_0001-0600 — Blender blocking, ONLY for his position and size in frame: centred, the same size until the dust covers him. Ignore its look, rig lines, grid, grey studio and stride speed.
+@HH_S11_0001-0120 — Blender blocking, ONLY for his position and size in frame: centred, at this size. Ignore its look, rig lines, grid, grey studio and stride speed. Hold that placement until the dust covers him.
 @gallop_side_ref — real gallop, side view: ONLY the leg mechanics and the tempo. Same mechanics, seen from the front. Ignore its look and background.
 
 THE HORSE
