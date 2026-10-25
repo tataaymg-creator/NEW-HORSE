@@ -1,0 +1,54 @@
+# HH — edit plan, shots 03–11
+
+Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the first frame of shot 03; add the length of shots 01–02 in front if they exist. Total for shots 03–11: **103 s (1:43)**.
+
+## Cut list
+
+| Shot | Timeline | Length | Source | In → out on the source | Notes |
+|---|---|---|---|---|---|
+| 03 | 0–8 | 8 | shot 03 take | 0.0 → 8.0 | Medium, heading right. |
+| 04 | 8–22 | 14 | shot 04 take | 0.0 → 14.0 | Very close, heading right. |
+| 05 | 22–30 | 8 | shot 05 take | 0.0 → 8.0 (drop frame 193) | The turn, right → left. Fix the background first (see below). |
+| 06 | 30–38 | 8 | shot 06 take | 0.0 → 8.0 | Wide, four horses, heading left. |
+| 07 | 38–52 | 14 | shot 07 take | 0.0 → 14.0 | Two heads, heading left. |
+| 08 | 52–63 | 11 | **shot 05 take, mirrored + speed ramp** | see below | The turn back, left → right. Or the generated shot 08 take, 0.0 → 11.0. |
+| 09 | 63–70 | 7 | **shot 03 take, not mirrored, punched in** | 1.0 → 8.0 | Heading right. Or the generated shot 09 take, 0.0 → 7.0. |
+| 10 | 70–78 | 8 | shot 10 take | 0.0 → 8.0 | Face and eye, heading right. |
+| 11 | 78–103 | 25 | shot 11 take (wide track-back) | 0.0 → 25.0 | Ends on a frame full of dust. |
+
+All hard cuts. Screen direction holds across every cut: right (03–05 in), left (05 out–08 in), right (08 out–10), head-on (11). For rhythm, cut on a hoof strike: one full stride is 1.8 s in every shot.
+
+## Shot 08 from the shot 05 take
+
+1. Fix the shot 05 take first (windows and sand figure, below), so the fix carries into both shots.
+2. Flip horizontally.
+3. Speed ramp: 0.0–2.5 s at 100% → 2.5–5.5 s at 50% → 5.5–8.0 s at 100%. That is 2.5 + 6.0 + 2.5 = **11.0 s**. The head-on moment lands at about 5–7.5 s.
+4. Ease each speed change over 6–8 frames. Use optical-flow retiming (Resolve Speed Warp or Topaz Chronos/Apollo), not frame blending; check the flying sand and mane in the 50% section.
+5. Mute the clip's own audio.
+
+## Shot 09 from the shot 03 take
+
+1. Do not mirror: shot 03 already faces right, and shots 08 → 09 → 10 all head right.
+2. Use 1.0 → 8.0 s so it does not open on the same frame as shot 03.
+3. Upscale first, then scale to about 130% and reposition so his eye sits at 37–40% of the frame width and a third down. That gives shot 09's very close framing and hides the repeat.
+
+## Fixes on the first shot 05 take
+
+Only if you keep that take; a re-roll with the v2 prompt should not need them. Positions are for the unmirrored take.
+
+| What | When | Where | Fix |
+|---|---|---|---|
+| Arena windows and roof frame | 0.0–1.5 s | top edge, up to ~22% down at frame 1, shrinking to nothing by 1.5 s | Feathered black gradient or mask over the top strip, keyed off as they leave |
+| Windows again | 7.7–8.0 s | top-left, 0–40% across, top ~10% | Same mask |
+| Sand clump that turns into a tiny figure | 7.17–7.67 s (frames 172–184) | lower right on the sand, moving from ~77% to ~87% across, ~90% down | Patch or object removal (Content-Aware Fill, Resolve patch replacer); 12 frames |
+
+In the mirrored shot 08 these move to 0.0–1.5 s and 10.7–11.0 s (top, now top-right for the second one) and 10.2–10.7 s (lower left, ~13–23% across).
+
+## Finishing
+
+- **Upscale every take before grading.** The Higgsfield takes are 992×432. Upscale all of them with the same model and settings (e.g. to 3840×1646) so detail matches from shot to shot.
+- **Grade to the stills.** Match every shot to the `HH_Sxx_v01` frames: deep clean blacks, warm amber dust, white coat with full texture in the highlights. Check the sun shafts did not get flattened.
+- **One grain pass over the whole timeline.** The same grain over every shot glues AI shots together better than each shot's own texture.
+- **Flicker:** if a take shimmers, use a light deflicker and keep the strength low. It must not freeze the moving light in the dust, which is what makes these shots read as real.
+- **Sound:** mute all generated audio and build one track for the whole piece: music plus one consistent set of slowed hoofbeats, breathing, wind and sand. The generated sound changes from shot to shot, and it is wrong on any retimed or mirrored clip.
+- **The end:** shot 11 finishes on 1 s of frame-filling dust (24–25 s). Cut or dissolve (about 12 frames) from there into the end card or packshot.
