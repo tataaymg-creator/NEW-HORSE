@@ -7,6 +7,9 @@ each split into its rows. Blocks are the SVG's top-level groups; shapes outside 
 Usage:
   svg_to_ae.py report LYRICS.svg            print blocks and rows
   svg_to_ae.py jsx LYRICS.svg SCRIPT.jsx    put the shape data into the After Effects script
+  svg_to_ae.py jsx LYRICS.svg SCRIPT.jsx 11,12,14,8s
+                                            only these blocks, in this order (0 title, 1 credit, n+1 line n);
+                                            a trailing s sets that line on one straight line
 """
 import json
 import math
@@ -309,7 +312,7 @@ def split_rows(els):
     rows = [{} for _ in bases]                    # row -> element index -> shapes
     for k, (n, u) in enumerate(pieces):
         rows[row_of[k]].setdefault(n, []).extend(u["shapes"])
-    return [[{"shapes": shapes, "bbox": bbox_of(shapes)} for shapes in r.values()] for r in rows]
+    return [[{"shapes": shapes, "bbox": bbox_of(shapes)} for shapes in r.values()] for r in rows], bases
 
 
 def build(svg_path):
@@ -317,10 +320,34 @@ def build(svg_path):
     blocks.sort(key=lambda els: union_bbox(els)[1])           # top to bottom
     out = []
     for n, els in enumerate(blocks):
-        rows = split_rows(els)
+        rows, bases = split_rows(els)
         out.append({"bbox": union_bbox(els),
-                    "rows": [{"bbox": union_bbox(r), "elements": [e["shapes"] for e in r]} for r in rows]})
+                    "rows": [{"bbox": union_bbox(r), "base": bases[k], "elements": [e["shapes"] for e in r]}
+                             for k, r in enumerate(rows)]})
     return out
+
+
+def moved(shapes, dx, dy):
+    return [{"v": [(x + dx, y + dy) for x, y in s["v"]], "i": s["i"], "o": s["o"], "closed": s["closed"]} for s in shapes]
+
+
+def straight(block, gap=0.3):
+    """The rows of a block laid out as one straight line: all on the first row's baseline, chained right to
+    left in reading order, gap x the median row height between them. Rows stay separate (written in turn)."""
+    heights = sorted(r["bbox"][3] - r["bbox"][1] for r in block["rows"])
+    space = gap * heights[len(heights) // 2]
+    base = block["rows"][0]["base"]
+    right = block["rows"][0]["bbox"][2]
+    rows = []
+    for r in block["rows"]:
+        dx, dy = right - r["bbox"][2], base - r["base"]
+        els = [moved(shapes, dx, dy) for shapes in r["elements"]]
+        bb = r["bbox"]
+        rows.append({"bbox": [bb[0] + dx, bb[1] + dy, bb[2] + dx, bb[3] + dy], "base": base, "elements": els})
+        right = bb[0] + dx - space
+    allb = [r["bbox"] for r in rows]
+    return {"bbox": [min(b[0] for b in allb), min(b[1] for b in allb), max(b[2] for b in allb), max(b[3] for b in allb)],
+            "rows": rows, "chain": True}
 
 
 def compact(data, digits=1):
@@ -343,16 +370,35 @@ def compact(data, digits=1):
                 els.append(el)
             rows.append({"box": [round(rb[0] - cx, digits), round(rb[1] - cy, digits),
                                  round(rb[2] - cx, digits), round(rb[3] - cy, digits)], "els": els})
-        out.append({"w": round(bx[2] - bx[0], digits), "h": round(bx[3] - bx[1], digits), "rows": rows})
+        entry = {"w": round(bx[2] - bx[0], digits), "h": round(bx[3] - bx[1], digits), "rows": rows}
+        if b.get("chain"):
+            entry["chain"] = True
+        out.append(entry)
     return out
 
 
-def write_jsx(svg_path, jsx_path):
-    """Put the shape data between the DATA markers of the After Effects script."""
-    data = json.dumps(compact(build(svg_path)), separators=(",", ":"))
+def select(full, spec):
+    """Blocks picked by a spec like "11,12,14,8s": block indices top to bottom (0 title, 1 credit, n+1 lyric
+    line n); a trailing s lays that block out as one straight line."""
+    out = []
+    for item in spec.split(","):
+        item = item.strip()
+        flat = item.endswith("s")
+        b = full[int(item.rstrip("s"))]
+        out.append(straight(b) if flat else b)
+    return out
+
+
+def write_jsx(svg_path, jsx_path, spec=None):
+    """Put the shape data between the DATA markers of the After Effects script. DATA_REF is the width of the
+    widest lyric line in the whole artwork, so every script draws the lettering at the same size."""
+    full = build(svg_path)
+    ref = max(b["bbox"][2] - b["bbox"][0] for b in full[2:])
+    data = json.dumps(compact(select(full, spec) if spec else full), separators=(",", ":"))
     src = open(jsx_path, encoding="utf-8-sig").read()
     a, b = src.index("// <DATA>"), src.index("// </DATA>")
-    src = src[:a] + "// <DATA>\n    var DATA = " + data + ";\n    " + src[b:]
+    src = (src[:a] + "// <DATA>\n    var DATA_REF = " + str(round(ref, 1)) + ";\n    var DATA = " + data + ";\n    "
+           + src[b:])
     open(jsx_path, "w", encoding="utf-8-sig").write(src)
     return len(data)
 
@@ -365,4 +411,5 @@ if __name__ == "__main__":
             print(f"block {n:2d}: {len(b['rows'])} rows  bbox w {bx[2]-bx[0]:7.1f} h {bx[3]-bx[1]:6.1f} at y {bx[1]:8.1f}  "
                   + "  ".join(f"[{len(r['elements'])} el, w {r['bbox'][2]-r['bbox'][0]:.0f} h {r['bbox'][3]-r['bbox'][1]:.0f}]" for r in b["rows"]))
     elif sys.argv[1] == "jsx":
-        print("wrote", write_jsx(sys.argv[2], sys.argv[3]), "characters of shape data into", sys.argv[3])
+        spec = sys.argv[4] if len(sys.argv) > 4 else None
+        print("wrote", write_jsx(sys.argv[2], sys.argv[3], spec), "characters of shape data into", sys.argv[3])

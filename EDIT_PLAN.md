@@ -100,3 +100,17 @@ Built from `lyrics_svg/lyrics_svg.svg` (your lettering), so no font is needed. R
 - Every line uses the same scale (`LYRIC_WIDTH`), so the lettering stays one size. Positions are in `LYRIC_POS` (one [x, y] per line, fractions of the frame); move any line there and run again.
 - If the edit changes, check each line against its shot: white lettering over the white horse is hard to read.
 - To change the lettering: replace `lyrics_svg/lyrics_svg.svg` (same structure: the title as loose shapes, the credit and each line in its own group, a gap between blocks) and run `python3 tools/svg_to_ae.py jsx lyrics_svg/lyrics_svg.svg HH_Lyrics_SVG_AE.jsx`. `python3 tools/svg_to_ae.py report lyrics_svg/lyrics_svg.svg` lists the blocks and rows it finds.
+
+### Extra lines — `HH_Lyrics_SVG_Extra_AE.jsx`
+
+A separate comp, `HH_Lyrics_SVG_Extra`: 12 s, transparent, same lettering size and motion as the main lyric comp. Four lines, each on screen alone for 3 s, one after the other:
+
+| Time | Line |
+|---|---|
+| 0–3 | من قوباسك ما يعرف عزمك الانهيار |
+| 3–6 | وما كل كفٍ يهز القلب تلويحها |
+| 6–9 | على خطى فكرتك تضوي مصابيحها |
+| 9–12 | إللي تسابق على مضمارها ريحها, on one straight line, written as one continuous stroke |
+
+- All four are centred (`LYRIC_POS`); move each to the dark space of the shot it goes over. `ORDER` (e.g. `[3, 0, 1, 2]`) reorders them without regenerating.
+- Regenerate after changing the SVG: `python3 tools/svg_to_ae.py jsx lyrics_svg/lyrics_svg.svg HH_Lyrics_SVG_Extra_AE.jsx 11,12,14,8s` (block numbers top to bottom: 0 title, 1 credit, line n = n+1; a trailing `s` sets that line on one straight line).
