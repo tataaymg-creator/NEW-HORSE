@@ -41,9 +41,54 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 | 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 907 words / 5065 chars |
 | 11 | He gallops straight at the camera, head-on (wide) | 8 | `HH_S11_v02`, `HH_S11_35mm_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1320 words / 7359 chars |
 
-## Establishing / title plate — 5 s
+## Shot 02 — Close dust plate (title space) — 5 s
 
-Attach the dust still as `HH_establishing_v01` (rename the handle if your file has another name). No video references. 568 words / 3064 chars.
+First generate the still from `HH_S02_STILL_PROMPT.md` and save it as `HH_S02_v01`. No video references. 652 words / 3452 chars.
+
+```text
+HH SHOT 02 — 5 s, 21:9 (2.33:1), one continuous slow-motion shot. Close, low shot of a plume of fine sand dust rising off the sand in the empty dark arena, faint sun shafts, the right half and upper part deep black for titles added in post. It opens the film small, before the wider shots of the horse.
+
+REFERENCES
+@HH_S02_v01 — THE FIRST FRAME of the clip and the look. Framing exactly as this image.
+
+FRAME
+Exactly the composition of the first frame: the dust plume rising off the sand in the left part of the frame, up to about half the frame height; loose, lumpy brown sand along the bottom, the nearest lumps large and soft; faint warm sun shafts falling from above the top edge at the upper left of centre. The right half of the frame and the upper part stay clean, deep black for the entire shot: this is the title space.
+
+CAMERA
+Close to the sand, just above the ground, level, about 29° field of view (an 85 mm look), shallow focus on the front of the plume. A very slow, perfectly smooth push-in toward the plume, about 4% tighter over the 5 s; the soft foreground lumps of sand slide gently toward the bottom edge.
+
+ACTION
+0.0–1.5s — The first frame comes alive: the plume keeps rising slowly, its edges curl over and fold into themselves, single grains glitter as they drift up through the faint shafts.
+1.5–3.5s — A soft breath of wind from the left lifts a thin wisp off the top of the plume and draws it out to the right in a slow ribbon that dissolves before it reaches the middle of the frame. At the base, a low skin of dust slides across the lumps of sand, and a few loose grains tumble down the side of a lump.
+3.5–5.0s — The top of the plume thins and spreads into a soft glowing haze while fresh dust keeps lifting gently off the sand at its base; motes float up through the shafts, in and out of focus. The shot ends with the dust still moving.
+
+DUST
+Fine sand dust in close-up and slow motion: soft billowing edges with fine wispy detail, single grains sharp and glinting in the plane of focus, motes in front of and behind the plume falling into soft round glints. It rolls, curls and thins continuously and stays low and in the left part of the frame.
+
+LIGHT IN MOTION
+The plume is backlit: its edges glow warm amber where the shafts touch it and its core stays darker, and that glowing edge shifts as the plume rolls. The faint shafts are light on drifting dust, so they shimmer and breathe as the dust passes through them. Warm 3500K low sun from above and behind; the lumps of sand at the left catch a warm rim. The shafts stay faint and the right side stays unlit.
+
+TEMPO
+Real high-speed slow motion at 24 fps, the same slowed pace as the rest of the film: the dust keeps moving in every frame, slow and fluid.
+
+LOOK
+Photoreal live-action commercial, the same look as the rest of the film: deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+
+SOUND
+Only: a low wind and the faint hiss of drifting sand. No music, no voices.
+
+KEEP CONSISTENT
+- Close shot all the way: the plume stays large in the left part of the frame.
+- The right half and the upper part of the frame stay clean, deep black for all 5 s.
+- The dust drifts gently and stays in the lower left; it never spreads across the frame.
+- The arena is empty: only sand, dust, light and darkness; black void above, exactly as in the first frame.
+- Exposure stays even from frame to frame.
+- One continuous shot, no cuts, no on-screen text.
+```
+
+## Alternative: wide establishing plate — 5 s
+
+The wider version, from the original dust still. Shot 02 above replaces it in the cut; kept in case you want a wide title card. Attach the dust still as `HH_establishing_v01` (rename the handle if your file has another name). No video references. 568 words / 3064 chars.
 
 ```text
 HH ESTABLISHING — 5 s, 21:9 (2.33:1), one continuous slow-motion shot. Title plate: the empty dark sand arena before the horse arrives, low dust drifting over the sand at the left through faint sun shafts, most of the frame deep black for titles added in post.
