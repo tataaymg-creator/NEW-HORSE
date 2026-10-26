@@ -1,6 +1,7 @@
 ﻿// HH — lyric overlay for After Effects (File > Scripts > Run Script File...)
 // Builds one comp with a transparent background: a 5 s title card, then each lyric line for 3 s,
-// white text, revealed word by word in reading order out of a soft blur, a slow push while it holds,
+// white Arabic text with the مدّ look (long kashida stretches drawn with the tatweel character ـ),
+// revealed word by word in reading order out of a soft blur, a slow push while it holds,
 // and a dissolve upward at the end of each line, like dust carried off in the backlight.
 // Keep this file saved as UTF-8 (with BOM) so the Arabic text reads correctly.
 
@@ -8,8 +9,10 @@
 
     // ================================ SETTINGS ================================
 
-    var FONT = "ديوان مد";          // font family, full name or PostScript name; change it and run again,
-                                     // or try fonts quickly with HH_Lyrics_SetFont.jsx
+    // Fonts to try, in order: the first one installed is used. Family, full or PostScript name.
+    // The مدّ works with any Arabic font; a light Naskh matches the references best.
+    var FONTS = ["Sakkal Majalla", "Adobe Arabic", "Noto Naskh Arabic", "Geeza Pro", "Arial"];
+
     var COMP_NAME = "HH_Lyrics";
     var WIDTH = 2206;                // the takes' frame size (21:9); for the upscaled final use e.g. 3840 x 1646:
     var HEIGHT = 946;                // sizes and positions below are fractions, so everything scales with it
@@ -18,24 +21,33 @@
     var INTRO_DUR = 5;               // title card, seconds
     var PHRASE_DUR = 3;              // each lyric line, seconds
 
-    var INTRO_TITLE = "هامة المجد";
+    // A single ـ marks where a word is stretched; the script turns each one into a long مدّ.
+    // Move, add or remove ـ marks freely. Text without a mark is never stretched.
+    var INTRO_TITLE = "هامـة المجـد";
     var INTRO_CREDIT = "كلمات الشيخ محمد بن راشد آل مكتوم";
 
     var LYRICS = [
-        "يا هامة المجد",
-        "شوق مسرّجات الأمهار",
-        "خزاين العِز",
-        "في كفّك مفاتيحها",
-        "ومن يعسف الخيل",
-        "ذات العز والانتصار",
-        "إللي تسابق على مضمارها ريحها",
-        "يقدر يعسف الظروف الكايده باقتدار",
-        "وترجح له الكفة إلى رام ترجيحها",
-        "من قوباسك ما يعرف عزمك الانهيار",
-        "وما كل كفٍ يهز القلب تلويحها",
-        "نظرة عيونك تدل الدرب وأهل القرار",
-        "على خطى فكرتك تضوي مصابيحها"
+        "يـا هامـة المجـد",
+        "شـوق مسرّجـات الأمهـار",
+        "خـزاين العِـز",
+        "فـي كفّـك مفاتيحهـا",
+        "ومـن يعسـف الخيـل",
+        "ذات العـز والانتصـار",
+        "إللـي تسابـق علـى مضمارهـا ريحهـا",
+        "يقـدر يعسـف الظـروف الكايـده باقتـدار",
+        "وترجـح لـه الكفـة إلـى رام ترجيحهـا",
+        "مـن قوباسـك مـا يعـرف عزمـك الانهيـار",
+        "ومـا كـل كـفٍ يهـز القلـب تلويحهـا",
+        "نظـرة عيونـك تـدل الـدرب وأهـل القـرار",
+        "علـى خطـى فكرتـك تضـوي مصابيحهـا"
     ];
+
+    // مدّ (kashida stretch)
+    var STRETCH = 5.0;               // length of each stretch, in font sizes (the references run about 5-7)
+    var STRETCH_MIN = 1.5;           // long lines shorten their stretches to fit, but never below this
+    var MADD_GROW = false;           // true: the stretches draw out while the line appears. They grow one
+                                     // tatweel at a time, so the growth is stepped rather than smooth.
+    var GROW_DUR = 0.8;              // seconds, when MADD_GROW is on
 
     // Layout, as fractions of the comp size
     var INTRO_CENTER = [0.70, 0.40]; // title card in shot 02's title space (right half, upper part)
@@ -45,7 +57,7 @@
     var CREDIT_GAP = 0.030;          // between title and credit, of comp height
     var LYRIC_CENTER = [0.50, 0.82]; // lyrics centred in the lower part of the frame
     var LYRIC_SIZE = 0.060;
-    var LYRIC_MAX_WIDTH = 0.86;      // a longer line is scaled down to fit
+    var LYRIC_MAX_WIDTH = 0.86;      // of comp width
 
     // Look
     var TEXT_COLOR = [1, 1, 1];
@@ -68,9 +80,22 @@
 
     // ================================ HELPERS =================================
 
+    var TATWEEL = "\u0640";
+
+    // PostScript names to try when this After Effects has no font list (before version 24)
+    var KNOWN_PS = {
+        "Sakkal Majalla": "SakkalMajalla",
+        "Adobe Arabic": "AdobeArabic-Regular",
+        "Noto Naskh Arabic": "NotoNaskhArabic-Regular",
+        "Geeza Pro": "GeezaPro",
+        "Arial": "ArialMT"
+    };
+
     function px(f) { return f * HEIGHT; }
 
     function lower(s) { return String(s).toLowerCase(); }
+
+    function repeat(s, n) { var out = ""; for (var i = 0; i < n; i++) out += s; return out; }
 
     function fontField(f, key) {
         try { return f[key] ? String(f[key]) : ""; } catch (e) { return ""; }
@@ -81,7 +106,7 @@
         return s === "regular" || s === "normal" || s === "book" || s === "medium";
     }
 
-    // Font lookup through app.fonts (After Effects 24.0 and later). Returns a font object or null.
+    // Font list through app.fonts (After Effects 24.0 and later). Returns false when unavailable.
     function eachFont(callback) {
         var groups;
         try { groups = app.fonts.allFonts; } catch (e) { return false; }
@@ -100,7 +125,7 @@
     function findFont(name) {
         var key = lower(name), exact = null, partial = null;
         var fields = ["postScriptName", "fullName", "nativeFullName", "familyName", "nativeFamilyName"];
-        eachFont(function (f) {
+        var listed = eachFont(function (f) {
             for (var k = 0; k < fields.length; k++) {
                 var v = lower(fontField(f, fields[k]));
                 if (!v) continue;
@@ -108,20 +133,34 @@
                 else if (!partial && v.indexOf(key) >= 0) partial = f;
             }
         });
-        return exact || partial;
+        return { listed: listed, font: exact || partial };
     }
 
-    function similarFonts() {
-        var out = [];
-        eachFont(function (f) {
-            var all = lower(fontField(f, "familyName") + " " + fontField(f, "nativeFamilyName") + " " +
-                            fontField(f, "postScriptName"));
-            if (out.length < 15 && (all.indexOf("diwan") >= 0 || all.indexOf("ديوان") >= 0 || all.indexOf("diwani") >= 0)) {
-                out.push(fontField(f, "postScriptName") + "  (" + fontField(f, "nativeFamilyName") + " " +
-                         fontField(f, "familyName") + ")");
+    // Without a font list: set the PostScript name on a test layer and keep it if it sticks.
+    function fontSticks(comp, ps) {
+        var layer = comp.layers.addText("test");
+        var prop = layer.property("ADBE Text Properties").property("ADBE Text Document");
+        var ok = false;
+        try {
+            var td = prop.value;
+            td.font = ps;
+            prop.setValue(td);
+            ok = prop.value.font === ps;
+        } catch (e) {}
+        layer.remove();
+        return ok;
+    }
+
+    function chooseFont(comp) {
+        for (var i = 0; i < FONTS.length; i++) {
+            var r = findFont(FONTS[i]);
+            if (r.font) return { ps: fontField(r.font, "postScriptName"), label: FONTS[i] };
+            if (!r.listed) {
+                var ps = KNOWN_PS[FONTS[i]] || FONTS[i];
+                if (fontSticks(comp, ps)) return { ps: ps, label: FONTS[i] };
             }
-        });
-        return out;
+        }
+        return null;
     }
 
     function tr(layer, matchName) { return layer.property("ADBE Transform Group").property(matchName); }
@@ -135,10 +174,12 @@
         for (var k = 1; k <= prop.numKeys; k++) prop.setTemporalEaseAtKey(k, ease, ease);
     }
 
+    function textProp(layer) { return layer.property("ADBE Text Properties").property("ADBE Text Document"); }
+
     function makeText(comp, str, sizePx, name, fontPS) {
         var layer = comp.layers.addText(str);
         layer.name = name;
-        var prop = layer.property("ADBE Text Properties").property("ADBE Text Document");
+        var prop = textProp(layer);
         var td = prop.value;
         try { td.resetCharStyle(); } catch (e1) {}
         try { td.resetParagraphStyle(); } catch (e2) {}
@@ -156,16 +197,61 @@
         return layer;
     }
 
+    function setText(layer, str) {
+        var prop = textProp(layer);
+        var td = prop.value;
+        td.text = str;
+        prop.setValue(td);
+    }
+
     function rectOf(layer) { return layer.sourceRectAtTime(layer.inPoint, false); }
 
     // Scale the font size down if the line is wider than maxWidthPx.
     function fitWidth(layer, maxWidthPx) {
         var r = rectOf(layer);
         if (r.width <= maxWidthPx) return;
-        var prop = layer.property("ADBE Text Properties").property("ADBE Text Document");
+        var prop = textProp(layer);
         var td = prop.value;
         td.fontSize = td.fontSize * (maxWidthPx / r.width);
         prop.setValue(td);
+    }
+
+    // Width of one tatweel per pixel of font size, measured in the chosen font.
+    function measureTatweel(comp, fontPS) {
+        var layer = makeText(comp, repeat(TATWEEL, 40), 100, "measure", fontPS);
+        var w = layer.sourceRectAtTime(0, false).width / 40 / 100;
+        layer.remove();
+        return w;
+    }
+
+    // Lay out a line with مدّ stretches at its ـ marks: as long as STRETCH allows, shorter if the line
+    // would be wider than maxWidthPx, never shorter than STRETCH_MIN; the font shrinks only after that.
+    // Returns the layer; the number of tatweels per stretch is kept in layer.comment.
+    function makeMadd(comp, marked, sizePx, name, fontPS, maxWidthPx, tatweelPerPx) {
+        var parts = String(marked).replace(/\u0640+/g, TATWEEL).split(TATWEEL);
+        var stretches = parts.length - 1;
+        var layer = makeText(comp, parts.join(""), sizePx, name, fontPS);
+        var n = 0;
+        if (stretches > 0 && tatweelPerPx > 0) {
+            var tw = tatweelPerPx * sizePx;
+            var bare = rectOf(layer).width;
+            n = Math.round(STRETCH * sizePx / tw);
+            var fits = Math.floor((maxWidthPx - bare) / (stretches * tw));
+            if (fits < n) n = fits;
+            var least = Math.ceil(STRETCH_MIN * sizePx / tw);
+            if (n < least) n = least;
+            setText(layer, parts.join(repeat(TATWEEL, n)));
+        }
+        fitWidth(layer, maxWidthPx);
+        layer.comment = "madd " + n;
+        if (MADD_GROW && n > 0) {
+            textProp(layer).expression =
+                "var b = \"" + parts.join("\\u0640") + "\";\n" +
+                "var n = Math.round(easeOut(time, inPoint, inPoint + " + GROW_DUR + ", 0, " + n + "));\n" +
+                "var s = \"\"; for (var i = 0; i < n; i++) s += \"\\u0640\";\n" +
+                "b.split(\"\\u0640\").join(s);";
+        }
+        return layer;
     }
 
     // Anchor at the centre of the text, layer at pos. Returns the text's height.
@@ -271,13 +357,12 @@
         try { comp.markerProperty.setValueAtTime(t, new MarkerValue(text)); } catch (e) {}
     }
 
+    function plain(marked) { return String(marked).replace(/\u0640+/g, ""); }
+
     // ================================= BUILD ==================================
 
     if (!app.project) app.newProject();
     app.beginUndoGroup("HH lyrics");
-
-    var font = findFont(FONT);
-    var fontPS = font ? fontField(font, "postScriptName") : FONT;   // older AE: hand the name straight to AE
 
     var total = INTRO_DUR + LYRICS.length * PHRASE_DUR;
     var folder = app.project.items.addFolder(COMP_NAME);
@@ -285,16 +370,16 @@
     comp.parentFolder = folder;
     comp.bgColor = [0, 0, 0];
 
+    var chosen = chooseFont(comp);
+    var fontPS = chosen ? chosen.ps : null;                  // null: After Effects' default font
+    var tatweelPerPx = measureTatweel(comp, fontPS);
+
     // Title card, 0 to INTRO_DUR
     var titlePos = [WIDTH * INTRO_CENTER[0], HEIGHT * INTRO_CENTER[1]];
-    var credit = makeText(comp, INTRO_CREDIT, px(CREDIT_SIZE), "00 Credit", fontPS);
-    var title = makeText(comp, INTRO_TITLE, px(TITLE_SIZE), "00 Title", fontPS);
-    var layers = [title, credit];
-    for (var i = 0; i < layers.length; i++) {
-        layers[i].inPoint = 0;
-        layers[i].outPoint = INTRO_DUR;
-        fitWidth(layers[i], WIDTH * INTRO_MAX_WIDTH);
-    }
+    var credit = makeMadd(comp, INTRO_CREDIT, px(CREDIT_SIZE), "00 Credit", fontPS, WIDTH * INTRO_MAX_WIDTH, tatweelPerPx);
+    var title = makeMadd(comp, INTRO_TITLE, px(TITLE_SIZE), "00 Title", fontPS, WIDTH * INTRO_MAX_WIDTH, tatweelPerPx);
+    title.inPoint = 0; title.outPoint = INTRO_DUR;
+    credit.inPoint = 0; credit.outPoint = INTRO_DUR;
     var titleH = centreAt(title, titlePos);
     var creditH = rectOf(credit).height;
     var creditPos = [titlePos[0], titlePos[1] + titleH / 2 + px(CREDIT_GAP) + creditH / 2];
@@ -308,7 +393,7 @@
     easeKeys(titleScale);
     addReveal(credit, 1.3, 1.0);
     addHoldAndOut(credit, creditPos, 0, INTRO_DUR, 100);
-    addMarker(comp, 0, INTRO_TITLE);
+    addMarker(comp, 0, plain(INTRO_TITLE));
 
     // Lyrics, PHRASE_DUR each
     var lyricPos = [WIDTH * LYRIC_CENTER[0], HEIGHT * LYRIC_CENTER[1]];
@@ -316,28 +401,28 @@
         var t0 = INTRO_DUR + n * PHRASE_DUR;
         var t1 = t0 + PHRASE_DUR;
         var num = (n + 1 < 10 ? "0" : "") + (n + 1);
-        var line = makeText(comp, LYRICS[n], px(LYRIC_SIZE), num + " " + LYRICS[n], fontPS);
+        var line = makeMadd(comp, LYRICS[n], px(LYRIC_SIZE), num + " " + plain(LYRICS[n]), fontPS,
+                            WIDTH * LYRIC_MAX_WIDTH, tatweelPerPx);
         line.inPoint = t0;
         line.outPoint = t1;
-        fitWidth(line, WIDTH * LYRIC_MAX_WIDTH);
         centreAt(line, lyricPos);
         addReveal(line, t0, IN_DUR);
         addHoldAndOut(line, lyricPos, t0, t1, 100);
-        addMarker(comp, t0, num + "  " + LYRICS[n]);
+        addMarker(comp, t0, num + "  " + plain(LYRICS[n]));
     }
 
     if (ADD_TO_RENDER_QUEUE) {
         try {
             var rq = app.project.renderQueue.items.add(comp);
             var om = rq.outputModule(1);
-            var templates = om.templates, chosen = null;
+            var templates = om.templates, template = null;
             for (var t = 0; t < templates.length; t++) {
-                if (templates[t] === "High Quality with Alpha") chosen = templates[t];
+                if (templates[t] === "High Quality with Alpha") template = templates[t];
             }
-            for (var u = 0; !chosen && u < templates.length; u++) {
-                if (templates[u].indexOf("Alpha") >= 0) chosen = templates[u];
+            for (var u = 0; !template && u < templates.length; u++) {
+                if (templates[u].indexOf("Alpha") >= 0) template = templates[u];
             }
-            if (chosen) om.applyTemplate(chosen);
+            if (template) om.applyTemplate(template);
         } catch (e) {}
     }
 
@@ -346,16 +431,9 @@
 
     var msg = COMP_NAME + ": " + total + " s, " + WIDTH + "x" + HEIGHT + ", " + FPS + " fps, transparent.\n" +
               "Title card 0-" + INTRO_DUR + " s, then " + LYRICS.length + " lines of " + PHRASE_DUR + " s.\n\n";
-    if (font) {
-        msg += "Font: " + fontField(font, "postScriptName") + " (" + fontField(font, "nativeFamilyName") + " " +
-               fontField(font, "familyName") + ")";
-    } else {
-        var similar = similarFonts();
-        msg += "Font \"" + FONT + "\" was not found by name. The text uses it only if After Effects recognises " +
-               "that exact name; otherwise it shows in the default font.\n" +
-               (similar.length ? "Installed fonts that look close:\n" + similar.join("\n") :
-                "Put the font's PostScript name in FONT at the top of the script.");
-    }
+    msg += chosen ? "Font: " + chosen.label + " (" + chosen.ps + ")" :
+                    "None of these fonts is installed: " + FONTS.join(", ") +
+                    ". The text uses After Effects' default font; put an installed Arabic font first in FONTS.";
     msg += "\n\nIf the Arabic letters look disconnected: Preferences > Type > Text Engine > " +
            "South Asian and Middle Eastern, restart After Effects, run again.";
     alert(msg);

@@ -7,7 +7,7 @@
 (function HH_Lyrics_SetFont() {
 
     var COMP_NAME = "HH_Lyrics";
-    var DEFAULT_FONT = "ديوان مد";
+    var DEFAULT_FONT = "Sakkal Majalla";
 
     function lower(s) { return String(s).toLowerCase(); }
 
@@ -86,7 +86,8 @@
     if (failed) msg += "\n" + failed + " layers could not take this font.";
     if (wide.length) msg += "\n\nThese lines are now wider than 90% of the frame; reduce their size or run " +
                             "HH_Lyrics_AE.jsx with this font to refit them:\n" + wide.join("\n");
-    msg += "\n\nThe credit's distance under the title is set for the original font; run HH_Lyrics_AE.jsx " +
-           "again with this font for an exact layout.";
+    msg += "\n\nThe مدّ stretches keep their tatweel count, so their length follows this font's tatweel, and " +
+           "the credit's distance under the title is set for the original font. For an exact layout, put this " +
+           "font first in FONTS in HH_Lyrics_AE.jsx and run that again.";
     alert(msg);
 })();
