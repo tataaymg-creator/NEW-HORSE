@@ -13,7 +13,7 @@ Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the f
 | 07 | 38–52 | 14 | shot 07 take | 0.0 → 14.0 | Two heads, heading left. |
 | 08 | 52–63 | 11 | **`HH_S08_from_S05.mp4`** (built from `SHOT 5.mp4`) | 0.0 → 11.0 | The turn back, left → right. Mirrored, eased speed ramp. |
 | 09 | 63–70 | 7 | **`HH_S09_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 7.0 | Heading right. Not mirrored, 1.3× punch-in. |
-| 10 | 70–78 | 8 | shot 10 take | 0.0 → 8.0 | Face and eye, heading right. |
+| 10 | 70–78 | 8 | **`HH_S10_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 8.0 | Face and eye, heading right. Eye-following crop with a slow push-in. |
 | 11 | 78–103 | 25 | shot 11 take (wide track-back) | 0.0 → 25.0 | Ends on a frame full of dust. |
 
 All hard cuts. Screen direction holds across every cut: right (03–05 in), left (05 out–08 in), right (08 out–10), head-on (11). For rhythm, cut on a hoof strike: one full stride is 1.8 s in every shot.
@@ -37,6 +37,16 @@ Source: `shot 3.mp4`.
 3. Punch-in 1.3×: crop 1698×728 at x 370, y 0, scaled back to 2206×946 (Lanczos). The crop is anchored to the top because his ears already touch the top edge of the source; his eye lands at about 39% across, nose about 53%.
 4. No audio. HEVC 10-bit, 2206×946, 24 fps, BT.709.
 5. After upscaling, redo it from the upscaled `shot 3.mp4` with the same numbers scaled up (e.g. at 2× source: crop 3396×1456 at x 740, y 0).
+
+## Shot 10 from the shot 03 take — built: `HH_S10_from_S03.mp4`
+
+Source: `shot 3.mp4`, frames 0–191 (**8.0 s**). Shot 09 uses 1.0–8.0 s of the same take right before it, so shot 10 is framed much tighter to read as a new shot.
+
+1. Face-and-eye crop: zoom 1.80× at the start easing to 2.16× at the end (20% push-in, as in the shot 10 prompt).
+2. The eye was tracked in every frame (template match, score ≥ 0.93). The virtual camera follows its slow drift fully and 60% of the stride bob with a short lag, like an operator on a long lens. The eye stays at 37–41% across and 28–44% down, matching `HH_S10_v01` (39%, 36%).
+3. Lanczos resampling in 10-bit. No audio. HEVC 10-bit, 2206×946, 24 fps, BT.709.
+4. Watch for: the sun shafts arrive on the right in the last 2–3 s of both shot 09 and shot 10 (same source). If the pair reads as a repeat, build shot 10 from the shot 04 take instead: different footage, already close, and 50 s away from where it is first used.
+5. After upscaling, redo it from the upscaled take; at 2× zoom it is the softest of the reused shots.
 
 ## Fixes on the first shot 05 take
 
