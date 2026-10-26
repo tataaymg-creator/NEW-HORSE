@@ -4,22 +4,22 @@ Save the result as **`HH_S10_v03.png`**: the shot 10 motion prompt uses it as th
 
 v02 came out right in look but too low: a near-profile at eye height with the nostrils in frame. v03 raises the camera above his eye line and frames higher on the head, like the client reference.
 
-## Reframe the v03 result (eye on the upper third)
+## Reframe the v03 result (eye on the upper third, text space on the left)
 
-The v03 result is right in angle and look, but the eye sits at 55% down, the vertical centre. Keep the image and move the frame down instead of generating again:
+The v03 result is right in angle and look, but the eye sits at 55% down, the vertical centre, and the dark space on the left is too narrow for titles. Keep the image and move the frame instead of generating again:
 
-1. Cut **21.9%** off the top (186 px on the 2000×851 file, 252 px on a 2688×1152 original).
-2. Extend the bottom by the same amount with outpainting (Photoshop Generative Expand, or Higgsfield outpaint). `HH_S10_v03_reframe_canvas.png` is the 2000×851 frame with the top already cut and the empty strip at the bottom.
-3. The eye then sits on the upper-right third: **67.8% across, 33.4% down**. The dark upper left, the shafts and the forelock across the top all stay. `HH_S10_v03_reframe_guide.png` shows before and after on a thirds grid.
+1. Cut **21.9%** off the top and **15%** off the right (186 px and 300 px on the 2000×851 file; 252 px and 403 px on a 2688×1152 original).
+2. Extend the left and the bottom by the same amounts with outpainting (Photoshop Generative Expand, or Higgsfield outpaint). `HH_S10_v03_reframe_canvas.png` is the 2000×851 frame with the image already moved and the empty strips on the left and bottom.
+3. The eye then sits far right and one third down: **82.8% across, 33.4% down**. His head fills the right half; the left half (about 45% of the width, top to two thirds down) is empty darkness for the text. The forelock still crosses the top. `HH_S10_v03_reframe_guide.png` shows before and after, with the text space marked.
 4. Save the result as `HH_S10_v03.png`: that is the first frame for the motion prompt.
 
-Outpaint prompt for the bottom strip:
+Outpaint prompt for the left and bottom strips:
 
 ```text
-Continue the photograph downward: the bridge of the horse's nose and his cheek in the same near-white coat with fine dark freckles, the same soft low warm light falling into shadow toward the bottom edge, the grey skin below the eye continuing down, the soft focus of the lower face. To the left of the nose, the same black background with faint warm gold dust. The nostrils and muzzle stay out of frame. Seamless with the image above, same grain.
+Continue the photograph to the left and downward. On the left: the same deep black background, empty and dark, with only faint warm gold dust and the faint sun shafts continuing from the top; nothing else. Below: the bridge of the horse's nose and his cheek in the same near-white coat with fine dark freckles, the same soft low warm light falling into shadow toward the bottom edge, the soft focus of the lower face; the nostrils and muzzle stay out of frame. Seamless with the image, same grain.
 ```
 
-If you generate again instead, Options A and B below already ask for the eye on the upper-right third.
+If you generate again instead, Options A and B below already ask for this layout.
 
 ## Generate
 
@@ -30,7 +30,7 @@ Attach as reference: `HH_S10_v02.png` (the first result: horse, light, dust and 
 For an image model that edits an attached image (Nano Banana, Seedream edit, etc.), with `HH_S10_v02.png` attached:
 
 ```text
-Same photograph, same horse, same light. Move the camera up and a little closer: it now looks down at his face from above his eye line at about 30°. We see the top of his forehead under the forelock and the bridge of his nose running down to the lower-left corner; the nostrils and muzzle are out of frame below. His near eye stays razor sharp on the right third, on the upper-right third, about 67% across and 33% down (one third down from the top), a little larger in the frame. Keep everything else exactly: the near-white freckled coat, the gold rim light on the forelock, lashes and brow, the warm catch-light in the eye, the sun shafts and dust in the dark upper left, the black background, 21:9.
+Same photograph, same horse, same light. Move the camera up and a little closer: it now looks down at his face from above his eye line at about 30°. We see the top of his forehead under the forelock and the bridge of his nose running down to the lower-left corner; the nostrils and muzzle are out of frame below. His near eye stays razor sharp, far right, about 83% across and 33% down (one third down from the top), a little larger in the frame; his head fills the right half and the left half is empty darkness. Keep everything else exactly: the near-white freckled coat, the gold rim light on the forelock, lashes and brow, the warm catch-light in the eye, faint sun shafts and dust in the empty dark left half, the black background, 21:9.
 ```
 
 ## Option B — full prompt
@@ -38,7 +38,7 @@ Same photograph, same horse, same light. Move the camera up and a little closer:
 ```text
 Extreme close-up of the grey stallion's head seen from above: the camera is higher than his eye, in front of him and to his side, looking down at his face at about 30°. His head is turned slightly toward the camera, so we see the top and front of his forehead and the bridge of his nose, not a flat profile. His near eye is large and sharp; his far eye is hidden beyond the curve of his forehead.
 
-FRAME: very close: his near eye is about a tenth of the frame width and sits on the upper-right third, about 67% across and 33% down (one third down from the top). The forelock falls across his forehead and the top edge of the frame; his ears are out of frame above. From the eye, the bridge of his nose runs down to the lower-left corner and leaves the frame there; the nostrils and muzzle are out of frame below. The upper left is deep darkness with faint sun shafts and dust; his cheek and jaw turn into shadow toward the right and bottom edges.
+FRAME: very close: his near eye is about a tenth of the frame width and sits far right, about 83% across and 33% down (one third down from the top). His head fills the right half of the frame. The forelock falls across his forehead and the top edge of the frame; his ears are out of frame above. From the eye, the bridge of his nose runs down to the bottom edge left of centre; the nostrils and muzzle are out of frame below; his cheek and mane are cut by the right edge. The left half of the frame is empty deep darkness with only faint sun shafts and dust: space for titles.
 
 LENS: a 100 mm macro lens, very shallow depth of field: the eye, its lashes and the skin around it razor sharp, the lower part of his face falling into soft blur.
 
@@ -52,8 +52,8 @@ LOOK: exactly the horse, light and colour of @HH_S10_v02, only the camera is hig
 ## Notes
 
 - If the result keeps the old low angle, the attached v02 is pulling it back. Run Option B again with `HH_S10_v01.png` attached instead, or with no reference.
-- Composition: the client reference has the eye near the centre. Here it is locked on the right third, so the face crosses the frame on a diagonal and the dark upper left stays free (it is also where the client's double exposure sits).
-- Screen direction: he faces left, while shot 09 runs right. A still, close portrait reads as a new moment, so the cut works. To keep the right-facing direction instead, flip the generated still horizontally before animating it; the eye then sits on the left third, about 35% across.
+- Composition: the client reference has the eye near the centre. Here the head sits in the right half with the eye far right, so the left half stays empty for the titles (it is also where the client's double exposure sits).
+- Screen direction: he faces left, while shot 09 runs right. A still, close portrait reads as a new moment, so the cut works. To keep the right-facing direction instead, flip the generated still horizontally before animating it; the eye then sits about 17% across and the text space moves to the right half.
 
 ---
 
