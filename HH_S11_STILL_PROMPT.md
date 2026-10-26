@@ -1,6 +1,6 @@
 # HH shot 11 — still prompt v02 (wide, first frame of the 8 s shot)
 
-Save the result as **`HH_S11_v02.png`**: the shot 11 video prompt uses it as the first frame.
+Save the result as **`HH_S11_v02.png`**: the shot 11 video prompt uses it as the first frame. The approved still came out tighter than asked (he fills about 82% of the frame height), which is now the opening frame of a pull-out: see `HH_S11_apply_pullout.py` and blend v04.
 
 Attach as references:
 - `HH_S11_v01.png`: same horse, same look. Its framing and lens are what change.
