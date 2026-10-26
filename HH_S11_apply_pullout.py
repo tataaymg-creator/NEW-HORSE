@@ -1,15 +1,18 @@
-"""HH_S11 blocking v04: 8 s, 35 mm, the camera pulls away faster than the horse runs.
+"""HH_S11 blocking v05: 8 s, 50 mm, the camera pulls away faster than the horse runs.
+
+v04 used LENS 35.0, D_START 7.9, D_END 20.0. v05 goes to a 50 mm look from proportionally further away, so
+the framing and the pull-out stay the same but his head is no longer enlarged by the close wide lens.
 
 Runs inside Blender (Text Editor > Run Script) on the original HH_S11_blocking.blend, or headless with bpy.
-Frame 1 matches the HH_S11_v02 still (the horse fills about 82% of the frame height). The camera eases into
+Frame 1 matches the HH_S11_v03 still (the horse fills about 80% of the frame height). The camera eases into
 its retreat over the first second, then pulls away at a steady rate, so the frame keeps widening to the end.
 """
 import bpy
 
-LENS = 35.0        # mm on the 36 mm-wide sensor: about 54 degrees horizontal
+LENS = 50.0        # mm on the 36 mm-wide sensor: about 40 degrees horizontal
 FRAMES = 192       # 8 s at 24 fps
-D_START = 7.9      # metres from camera to the horse's root at frame 1
-D_END = 20.0       # metres at the last frame
+D_START = 11.0     # metres from camera to the horse's root at frame 1
+D_END = 28.6       # metres at the last frame
 EASE = 24          # frames over which the retreat speeds up from zero
 CAM_Z = 1.48       # camera height in metres (chest height); places him like the still
 
