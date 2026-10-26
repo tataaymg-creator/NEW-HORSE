@@ -1,8 +1,44 @@
-# HH shot 10 — still prompt v02 (client version: very close, head angled to camera)
+# HH shot 10 — still prompt v03 (client version, seen from above)
 
-Save the result as **`HH_S10_v02.png`**: the new shot 10 motion prompt uses it as the first frame. Put it in Higgsfield's start-frame slot when you generate the video.
+Save the result as **`HH_S10_v03.png`**: the shot 10 motion prompt uses it as the first frame. Put it in Higgsfield's start-frame slot when you generate the video.
 
-Attach as reference: `HH_S10_v01.png` (same horse, same look). Do **not** attach the client's double-exposure comp: the face in it would bleed into the horse. Its angle and closeness are written into the prompt instead.
+v02 came out right in look but too low: a near-profile at eye height with the nostrils in frame. v03 raises the camera above his eye line and frames higher on the head, like the client reference.
+
+Attach as reference: `HH_S10_v02.png` (the first result: horse, light, dust and colour). Do **not** attach the client's double-exposure comp: the face in it would bleed into the horse.
+
+## Option A — edit the v02 still (fastest, keeps the look)
+
+For an image model that edits an attached image (Nano Banana, Seedream edit, etc.), with `HH_S10_v02.png` attached:
+
+```text
+Same photograph, same horse, same light. Move the camera up and a little closer: it now looks down at his face from above his eye line at about 30°. We see the top of his forehead under the forelock and the bridge of his nose running down to the lower-left corner; the nostrils and muzzle are out of frame below. His near eye stays razor sharp on the right third, about 65% across and 40% down, a little larger in the frame. Keep everything else exactly: the near-white freckled coat, the gold rim light on the forelock, lashes and brow, the warm catch-light in the eye, the sun shafts and dust in the dark upper left, the black background, 21:9.
+```
+
+## Option B — full prompt
+
+```text
+Extreme close-up of the grey stallion's head seen from above: the camera is higher than his eye, in front of him and to his side, looking down at his face at about 30°. His head is turned slightly toward the camera, so we see the top and front of his forehead and the bridge of his nose, not a flat profile. His near eye is large and sharp; his far eye is hidden beyond the curve of his forehead.
+
+FRAME: very close: his near eye is about a tenth of the frame width and sits on the right-third line, about 65% across and 40% down. The forelock falls across his forehead and the top edge of the frame; his ears are out of frame above. From the eye, the bridge of his nose runs down to the lower-left corner and leaves the frame there; the nostrils and muzzle are out of frame below. The upper left is deep darkness with faint sun shafts and dust; his cheek and jaw turn into shadow toward the right and bottom edges.
+
+LENS: a 100 mm macro lens, very shallow depth of field: the eye, its lashes and the skin around it razor sharp, the lower part of his face falling into soft blur.
+
+LIGHT: warm 3500K low sun from above and behind him, a thin gold rim along the forelock, the eyelashes, the brow and the bridge of the nose; the rest of his face in soft, low light that shows every freckle and fine hair; a warm catch-light in the eye. Faint sun shafts and a few dust motes drift in the darkness behind and in front of him.
+
+THE EYE: open, calm, wet, dark brown, with the horizontal oval pupil, long pale lashes, the soft folds of skin around it.
+
+LOOK: exactly the horse, light and colour of @HH_S10_v02, only the camera is higher and closer: near-white flea-bitten grey coat with fine dark freckles, dark brown eyes, long silver-white mane and forelock, bare with no tack. Black void background, warm amber-gold dust, deep clean blacks, punchy contrast, full texture in the white coat, fine natural grain. Photoreal live-action photograph. 21:9, 2688×1152.
+```
+
+## Notes
+
+- If the result keeps the old low angle, the attached v02 is pulling it back. Run Option B again with `HH_S10_v01.png` attached instead, or with no reference.
+- Composition: the client reference has the eye near the centre. Here it is locked on the right third, so the face crosses the frame on a diagonal and the dark upper left stays free (it is also where the client's double exposure sits).
+- Screen direction: he faces left, while shot 09 runs right. A still, close portrait reads as a new moment, so the cut works. To keep the right-facing direction instead, flip the generated still horizontally before animating it; the eye then sits on the left third, about 35% across.
+
+---
+
+# Previous: still prompt v02 (eye height)
 
 ```text
 Extreme close-up portrait of the grey stallion's head, standing still in the dark arena, his head turned slightly toward the camera: a three-quarter view, not a flat profile. We look along the front of his face; his near eye is large and sharp, his far eye hidden behind the bridge of his nose.
@@ -17,8 +53,3 @@ THE EYE: open, calm, wet, dark brown, with the horizontal oval pupil, long pale 
 
 LOOK: the same horse as @HH_S10_v01: near-white flea-bitten grey coat with fine dark freckles, dark slate-grey muzzle, dark brown eyes, long silver-white mane and forelock, bare with no tack. Black void background, warm amber-gold dust, deep clean blacks, punchy contrast, full texture in the white coat, fine natural grain. Photoreal live-action photograph. 21:9, 2688×1152.
 ```
-
-## Notes
-
-- Composition: the client reference has the eye near the centre. Here it is locked on the right third, so the face crosses the frame on a diagonal and the dark upper left stays free (it is also where the client's double exposure sits).
-- Screen direction: the reference faces left, while shot 09 runs right. A still, close portrait reads as a new moment, so the cut works. To keep the right-facing direction instead, flip the generated still horizontally before animating it; the eye then sits on the left third, about 35% across.
