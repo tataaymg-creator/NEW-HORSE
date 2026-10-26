@@ -84,3 +84,19 @@ Run it in After Effects (File > Scripts > Run Script File…). It builds the com
 - Render: the comp goes into the Render Queue with the "High Quality with Alpha" output module. Lay the result over the edit starting at shot 02. Each line also has a comp marker, so you can slide lines to the music.
 - Arabic needs Preferences > Type > Text Engine > South Asian and Middle Eastern (restart After Effects). If the words appear left to right, set `REVEAL_REVERSED = true` and run again.
 - For the upscaled final, set `WIDTH`/`HEIGHT` (e.g. 3840×1646) and run again: sizes and positions are fractions of the frame.
+
+## Lyric overlay from the lettering SVG — `HH_Lyrics_SVG_AE.jsx` (use this one)
+
+Built from `lyrics_svg/lyrics_svg.svg` (your lettering), so no font is needed. Run it in After Effects (File > Scripts > Run Script File…). It builds the comp `HH_Lyrics_SVG`: 2206×946, 24 fps, 44 s, transparent, pure white shape layers.
+
+| Time | Block | Where (dark space of the shot underneath) |
+|---|---|---|
+| 0–5 | Title «هامة المجد» + credit | Right half, upper part: shot 02's title space |
+| 5–29 | Lines 1–8 | Right of the horse, shots 03–04 (line 8 higher, clear of his head at the start of shot 05) |
+| 29–35 | Lines 9–10 | Upper left, shot 05 (he turns, then leaves on the right) |
+| 35–44 | Lines 11–13 | Top centre, above the four horses in shot 06 |
+
+- Each row of lettering is written right to left behind a soft edge, with a warm light riding the pen tip; the rows of a line follow each other 0.3 s apart. The line rises gently into place, holds on a slow 2% push, and in its last 0.6 s breaks up like dust, blurs and fades upward.
+- Every line uses the same scale (`LYRIC_WIDTH`), so the lettering stays one size. Positions are in `LYRIC_POS` (one [x, y] per line, fractions of the frame); move any line there and run again.
+- If the edit changes, check each line against its shot: white lettering over the white horse is hard to read.
+- To change the lettering: replace `lyrics_svg/lyrics_svg.svg` (same structure: the title as loose shapes, the credit and each line in its own group, a gap between blocks) and run `python3 tools/svg_to_ae.py jsx lyrics_svg/lyrics_svg.svg HH_Lyrics_SVG_AE.jsx`. `python3 tools/svg_to_ae.py report lyrics_svg/lyrics_svg.svg` lists the blocks and rows it finds.
