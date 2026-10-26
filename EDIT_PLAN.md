@@ -11,26 +11,32 @@ Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the f
 | 05 | 22–30 | 8 | shot 05 take | 0.0 → 8.0 (drop frame 193) | The turn, right → left. Fix the background first (see below). |
 | 06 | 30–38 | 8 | shot 06 take | 0.0 → 8.0 | Wide, four horses, heading left. |
 | 07 | 38–52 | 14 | shot 07 take | 0.0 → 14.0 | Two heads, heading left. |
-| 08 | 52–63 | 11 | **shot 05 take, mirrored + speed ramp** | see below | The turn back, left → right. Or the generated shot 08 take, 0.0 → 11.0. |
-| 09 | 63–70 | 7 | **shot 03 take, not mirrored, punched in** | 1.0 → 8.0 | Heading right. Or the generated shot 09 take, 0.0 → 7.0. |
+| 08 | 52–63 | 11 | **`HH_S08_from_S05.mp4`** (built from `SHOT 5.mp4`) | 0.0 → 11.0 | The turn back, left → right. Mirrored, eased speed ramp. |
+| 09 | 63–70 | 7 | **`HH_S09_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 7.0 | Heading right. Not mirrored, 1.3× punch-in. |
 | 10 | 70–78 | 8 | shot 10 take | 0.0 → 8.0 | Face and eye, heading right. |
 | 11 | 78–103 | 25 | shot 11 take (wide track-back) | 0.0 → 25.0 | Ends on a frame full of dust. |
 
 All hard cuts. Screen direction holds across every cut: right (03–05 in), left (05 out–08 in), right (08 out–10), head-on (11). For rhythm, cut on a hoof strike: one full stride is 1.8 s in every shot.
 
-## Shot 08 from the shot 05 take
+## Shot 08 from the shot 05 take — built: `HH_S08_from_S05.mp4`
 
-1. Fix the shot 05 take first (windows and sand figure, below), so the fix carries into both shots.
-2. Flip horizontally.
-3. Speed ramp: 0.0–2.5 s at 100% → 2.5–5.5 s at 50% → 5.5–8.0 s at 100%. That is 2.5 + 6.0 + 2.5 = **11.0 s**. The head-on moment lands at about 5–7.5 s.
-4. Ease each speed change over 6–8 frames. Use optical-flow retiming (Resolve Speed Warp or Topaz Chronos/Apollo), not frame blending; check the flying sand and mane in the 50% section.
-5. Mute the clip's own audio.
+Source: `SHOT 5.mp4` (the fixed take), frames 0–191.
 
-## Shot 09 from the shot 03 take
+1. Speed ramp on the source: 0.0–2.75 s at 100% → 2.75–5.75 s at 50% → 5.75–8.0 s at 100%. That is 2.75 + 6.0 + 2.25 = **11.0 s** (264 frames). In this take the turn runs about 2.5–6.0 s with the head-on moment at 4.25–5.25 s, so the slow section sits on it; on the timeline he is head-on at about 5–8 s.
+2. Each speed change eases over 8 frames (cosine), centred on 2.75 s and 8.75 s of the output.
+3. In-between frames: ffmpeg motion-compensated interpolation at 4× over source frames 58–146, so the slow section and the eases land on real or quarter-frame positions.
+4. Flipped horizontally. No audio. HEVC 10-bit, 2206×946, 24 fps, BT.709.
+5. The interpolated section went through 8-bit. Good for the client preview; for the final, redo the same ramp on the upscaled take in Resolve Speed Warp or Topaz (same ramp points), and check the flying sand in the 50% section.
 
-1. Do not mirror: shot 03 already faces right, and shots 08 → 09 → 10 all head right.
-2. Use 1.0 → 8.0 s so it does not open on the same frame as shot 03.
-3. Upscale first, then scale to about 130% and reposition so his eye sits at 37–40% of the frame width and a third down. That gives shot 09's very close framing and hides the repeat.
+## Shot 09 from the shot 03 take — built: `HH_S09_from_S03.mp4`
+
+Source: `shot 3.mp4`.
+
+1. Not mirrored: shot 03 already faces right, and shots 08 → 09 → 10 all head right.
+2. Source 1.0 → 8.0 s (frames 24–191, 168 frames = **7.0 s**), so it does not open on the same frame as shot 03.
+3. Punch-in 1.3×: crop 1698×728 at x 370, y 0, scaled back to 2206×946 (Lanczos). The crop is anchored to the top because his ears already touch the top edge of the source; his eye lands at about 39% across, nose about 53%.
+4. No audio. HEVC 10-bit, 2206×946, 24 fps, BT.709.
+5. After upscaling, redo it from the upscaled `shot 3.mp4` with the same numbers scaled up (e.g. at 2× source: crop 3396×1456 at x 740, y 0).
 
 ## Fixes on the first shot 05 take
 
