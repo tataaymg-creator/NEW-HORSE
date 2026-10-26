@@ -41,6 +41,50 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 | 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 907 words / 5065 chars |
 | 11 | He gallops straight at the camera, head-on (wide) | 8 | `HH_S11_v02`, `HH_S11_35mm_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1320 words / 7359 chars |
 
+## Establishing / title plate — 5 s
+
+Attach the dust still as `HH_establishing_v01` (rename the handle if your file has another name). No video references. 568 words / 3064 chars.
+
+```text
+HH ESTABLISHING — 5 s, 21:9 (2.33:1), one continuous slow-motion shot. Title plate: the empty dark sand arena before the horse arrives, low dust drifting over the sand at the left through faint sun shafts, most of the frame deep black for titles added in post.
+
+REFERENCES
+@HH_establishing_v01 — THE FIRST FRAME of the clip and the look. Framing exactly as this image.
+
+FRAME
+Exactly the composition of the first frame: a strip of loose, churned brown sand along the bottom of the frame; a low cloud of fine dust rising off the sand in the left third; faint warm sun shafts falling from above the top edge at the upper left of centre; everything else deep black. The right half of the frame and the whole upper part stay clean, deep black for the entire shot: this is the title space.
+
+CAMERA
+Low, a little above the sand, level, about 47° field of view, on a heavy tripod head. A very slow, perfectly smooth push-in, about 3% tighter over the 5 s.
+
+ACTION
+0.0–2.0s — The first frame comes alive: the dust cloud at the left keeps rising slowly and curls over on itself; a light breeze from the left draws its top edge out to the right in thin, soft streamers that fade away before they reach the middle of the frame; fine grains glitter as they drift through the faint shafts.
+2.0–3.5s — A soft gust skims the sand: a low, thin sheet of dust lifts off the surface at the left, slides a little to the right along the ground and settles again; loose grains roll over the ripples of the sand.
+3.5–5.0s — The dust thins and spreads into a low, glowing haze over the sand at the left; single motes keep floating up through the shafts. The shot ends with the dust still drifting.
+
+DUST
+Fine sand dust in slow motion: it rolls, curls and thins continuously, with soft edges and single glittering grains; it stays low and in the left part of the frame. The sand surface keeps its lumpy, churned texture; a few loose grains tumble across it in the breeze.
+
+LIGHT IN MOTION
+The faint shafts are light on drifting dust, so they shimmer and breathe as the dust passes through them, and motes glint as they cross. Warm 3500K low sun from above and behind; the lumps of sand at the left catch a warm rim. The shafts stay faint and the right side stays unlit.
+
+TEMPO
+Real high-speed slow motion at 24 fps, the same slowed pace as the rest of the film: the dust keeps moving in every frame, slow and fluid.
+
+LOOK
+Photoreal live-action commercial, the same look as the rest of the film: deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+
+SOUND
+Only: a low wind and the faint hiss of drifting sand. No music, no voices.
+
+KEEP CONSISTENT
+- The right half and the upper part of the frame stay clean, deep black for all 5 s; dust and light stay low and at the left.
+- The dust drifts gently and stays in the lower left; it never spreads across the frame.
+- The arena is empty: only sand, dust, light and darkness; black void above, exactly as in the first frame.
+- Exposure stays even from frame to frame.
+- One continuous shot, no cuts, no on-screen text.
+```
+
 ## Shot 03 — Medium: head, neck, chest and forelegs, galloping — 8 s
 
 ```text
