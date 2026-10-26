@@ -27,6 +27,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 - **v10, shot 11 new still and 50 mm.** The v02 still was long-legged, but the close 35 mm lens made his head about 38% of his height, which reads as short and squat. New still `HH_S11_v03` (`HH_S11_STILL_PROMPT.md`): a 50 mm look from about 10 m, one foreleg planted straight, explicit proportions. Blend v05 keeps the same pull-out with the lens and distances scaled (11.0 m to 28.6 m): 80% of the frame height at the start, 49% at 3 s, 38% at 5 s, 28% at 8 s. Lock `HH_S11_pullout50_0001-0192`.
 - **v9, shot 11 proportions.** The first pull-out take did not start on `HH_S11_v02` and redrew him stocky: shorter, thicker legs, big hooves, a wider body. The prompt had asked for his head, chest and forelegs to read largest and his chest and shoulders to be the widest part of him, and the shared horse block says heavy neck, deep chest. Shot 11 now has its own horse block with the still's build (legs as long as the body is deep, slender cannons, small hooves) and a lock line that he only gets smaller, never shorter. Put `HH_S11_v02` in the start-frame slot, and set the duration to 8 s.
 - **v8, shot 11 pull-out.** The new still `HH_S11_v02` came out with him filling about 82% of the frame height (chest dominant, belly hidden: the client note is solved). The camera now starts on that framing and pulls away faster than he runs: 35 mm, camera 1.48 m high, from 7.9 m to 20 m (horse root) with a 1 s ease-in. He shrinks to ~50% of the frame height by 3 s, ~38% by 5 s, ~29% by 8 s. Blend v04 (`HH_S11_apply_pullout.py`), lock `HH_S11_pullout_0001-0192`.
+- **v11, shot 10 replaced (client).** A very close, still portrait instead of the galloping eye shot: the head turned slightly toward the camera, the near eye locked on the right third, the wind in the forelock while he slowly closes and opens his eye. New first frame `HH_S10_v02` (`HH_S10_STILL_PROMPT.md`). The shot 10 built from the shot 03 take is no longer needed.
 - **v7, shot 11 cut to 8 s and widened with a wider lens.** New first frame `HH_S11_v02` (still prompt in `HH_S11_STILL_PROMPT.md`). The client found the belly too big next to the chest: the old 70 mm-from-far-away framing flattened depth, so the barrel read as wide as the chest. The camera now stays at the original ~12 m with a 35 mm lens (blend v03, lock `HH_S11_35mm_0001-0192`): he fills about 45% of the frame height and his chest and shoulders read largest, the body falling away behind. Beats compressed: gallop 0–5 s, dust surge 5–7 s, full dust 7–8 s.
 - **v5, shot 11 light.** The take lit the horse up from inside at 7–9 s and 17–19 s (frame brightness more than doubled) because the prompt had him run through two sun shafts that "flare bright gold" across his chest. Both beats are gone: the sun now stays behind him all shot, he is lit only by a rim, exposure stays even, and the shafts move only in the dust behind him. New beats: the dust rolling through the shafts at 7–10 s, a head toss at 18 s. The dust ending is unchanged apart from a dark, rim-lit silhouette at 23 s.
 
@@ -41,7 +42,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 | 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 22.3 s | 1015 words / 5676 chars |
 | 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 1146 words / 6416 chars |
 | 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 894 words / 5017 chars |
-| 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 907 words / 5065 chars |
+| 10 | Very close: the eye closes and opens (client version, standing) | 8 | `HH_S10_v02` | 0.0 s | 748 words / 4142 chars |
 | 11 | He gallops straight at the camera, head-on (wide) | 8 | `HH_S11_v03`, `HH_S11_pullout50_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1461 words / 8217 chars |
 
 ## Shot 02 — Close dust plate (title space) — 5 s
@@ -489,53 +490,49 @@ KEEP CONSISTENT
 - One continuous shot, no cuts, no on-screen text.
 ```
 
-## Shot 10 — Very close: the face and eye — 8 s
+## Shot 10 — Very close: the eye closes and opens (client version, standing) — 8 s
 
 ```text
-HH SHOT 10 — 8 s, 21:9 (2.33:1), one continuous slow-motion shot. Very close tracking shot on the grey stallion's face and eye as he gallops screen-right, creeping in on the eye.
+HH SHOT 10 — 8 s, 21:9 (2.33:1), one continuous slow-motion shot. Extreme close-up of the grey stallion's head, standing still, turned slightly toward the camera; the wind moves his forelock and mane while he slowly closes his eye and slowly opens it again.
 
 REFERENCES
-@HH_S10_v01 — THE FIRST FRAME and the look. Framing and his place in frame exactly as this image.
-@gallop_side_ref — real gallop, side view: ONLY the leg mechanics and the tempo. It runs screen-left; mirror it, he runs screen-right. Ignore its look and background.
+@HH_S10_v02 — THE FIRST FRAME of the clip and the look: framing, angle and light exactly as this image.
 
 THE HORSE
-Grey Iberian stallion: heavy arched neck, deep chest; near-white coat with fine dark flea-bitten freckles, dark slate-grey muzzle, dark brown eyes, long thick wavy silver-white mane and forelock, full silver-white tail, lower legs shading to dark grey, black hooves. Bare, no tack. 100% matches the reference.
+Grey Iberian stallion, standing still: near-white coat with fine dark flea-bitten freckles, dark slate-grey muzzle, dark brown eyes with long pale lashes, long silver-white mane and forelock. Bare, no tack. 100% matches the reference.
 
 CAMERA
-Stabilised arm on a tracking vehicle running alongside on his right side at his speed (about 45 km/h), lens at eye height, 18° field of view: long lens, very shallow focus, razor-sharp on the eye. Over the 8 s a very slow push-in toward the eye, about 20% tighter by the end, the eye holding its exact place in frame. Only a faint organic float.
-FRAMING: eye at about 39% of the frame width and a third down from the top, nose at about 52%. Neck and mane fill the left side to the edge. The right half of the frame is open dark space ahead of him.
+Locked off on a heavy tripod at the height of his eye, about 18° field of view (a 100 mm macro look), very shallow focus on the eye. The frame holds still for all 8 s, with only a barely perceptible organic float.
+FRAMING: exactly the first frame: a three-quarter view, his head turned slightly toward the camera; his near eye on the right-third line, about 65% across and 38% down; the forelock and mane across the top edge; his face running diagonally down to the muzzle at the lower left, soft and out of focus; deep empty darkness in the upper left; his cheek and jaw turning into shadow toward the right edge.
 
 ACTION
-0.0–2.0s — The first frame comes alive: the eye wide open, wet, dark brown, a sharp catch-light of the sun in it that shifts as he runs; the head dips and lifts with the stride.
-2.0–4.0s — The camera creeps in. A gust lifts the mane, strands whip across the top of the frame; the fine hairs on the muzzle and around the eye quiver in the wind.
-4.0–5.0s — He blinks once: the long lashes close and open; the skin around the eye twitches.
-5.0–8.0s — The eye looks forward, focused and steady; veins and muscle under the thin skin of the face shift with each stride; dust glitters in the shaft behind him. The shot ends close on the face and eye, still galloping.
+0.0–2.0s — The first frame comes alive: he stands still, his eye open and calm. A steady breeze from behind lifts the forelock and loose strands of the mane across the top of the frame; single hairs drift across his brow; his nostrils widen once with a slow breath.
+2.0–3.6s — He slowly closes his eye: the upper lid lowers smoothly, the long lashes come down and meet the lower lashes, the soft skin around the eye folds. At 2.8s a gust lifts the forelock higher.
+3.6–4.6s — Eye closed, calm. A slow breath moves the skin of his cheek; dust motes drift through the warm light in front of him.
+4.6–6.6s — He slowly opens his eye: the lid lifts, the lashes part, the wet dark-brown eye with its horizontal pupil returns, and the warm catch-light comes back into it.
+6.6–8.0s — Eye open, steady and calm, looking past the camera; the forelock settles and lifts again in the breeze. The shot ends still and calm, the eye open.
 
-GALLOP
-Below the frame his legs run the real four-beat gallop of @gallop_side_ref, and its rhythm drives everything in frame: once per stride the head and neck dip as the forelegs land and lift in the moment of suspension. Muscles ripple under the skin of neck and jaw, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels forward through the space.
-
-WIND, MANE, DUST
-The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back toward screen-left, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
+WIND, HAIR, DUST
+A steady breeze from behind him with soft gusts. The forelock and the loose strands of the mane lift, wave, cross and settle all the time, single flyaway hairs glowing in the backlight; the fine hairs on his face and the eyelashes tremble in the air. Dust in three depths: soft grains drifting past the lens, motes glittering in the light around his head, a thin haze far back in the dark.
 
 LIGHT IN MOTION
-The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The camera travels, so the shafts slide toward screen-left with depth parallax, near ones faster than far ones. Backlit mane strands flare gold and flicker as they cross a beam; the rim light on his face and body breathes as the dust in front of the sun thickens and thins.
+Warm 3500K low sun from above and behind him: a thin gold rim along the forelock, the lashes, the brow and the bridge of the nose; the rest of his face in soft, low light showing every freckle and fine hair. The faint sun shafts behind him shimmer as dust drifts through them; the rim on the forelock flickers as the strands move; the catch-light in the eye shifts with his breathing. Exposure stays even; his coat reflects the light and never glows from within.
 
 TEMPO
-Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
+Real high-speed slow motion at 24 fps, the same slowed pace as the rest of the film: the eye closes over about 1.5 s and opens over about 2 s; hair and dust keep moving at that same slowed rate, fluid in every frame.
 
 LOOK
-Photoreal live-action commercial. He runs on loose, churned brown sand. Behind him the background is a deep black void, exactly as in the reference stills: black darkness, sun shafts and drifting dust, nothing else, from the top edge of the frame to the sand. The shafts fall into the frame from above its top edge, warm 3500K low late sun, cutting long volumetric beams through the dust. White coat with a warm gold rim, full texture in the highlights. Shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, fine natural grain. 21:9.
+Photoreal live-action commercial. Behind him a deep black void with faint sun shafts and drifting dust, nothing else. Very shallow depth of field, deep clean blacks, amber-gold dust, punchy contrast, full texture in the white coat, fine natural grain. 21:9.
 
 SOUND
-Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand. No music, no voices.
+Only: a soft wind, one slow calm breath, the faint hiss of drifting sand. No music, no voices.
 
 KEEP CONSISTENT
-- He gallops screen-right for the whole shot; the eye stays at about 39% of the frame width.
-- The push-in is slow and steady; the eye stays sharp from first frame to last.
-- Background from first frame to last: black darkness, sun shafts and dust only; the top of the frame stays black.
-- The sand stays plain sand and dust; he is the only living thing in the frame.
-- Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
-- Eyes open, wet, alive.
+- He stands still: his head stays in the same place for all 8 s, the near eye on the right third (about 65% across, 38% down); only breathing and the wind move him.
+- The eye closes once and opens once, both slowly; only the near eye is visible.
+- The frame holds still; the background stays black darkness, faint shafts and dust.
+- Forelock, mane and dust move in every frame.
+- He is the only living thing in the frame.
 - One continuous shot, no cuts, no on-screen text.
 ```
 

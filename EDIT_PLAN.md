@@ -14,10 +14,10 @@ Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the f
 | 07 | 43–57 | 14 | shot 07 take | 0.0 → 14.0 | Two heads, heading left. |
 | 08 | 57–68 | 11 | **`HH_S08_from_S05.mp4`** (built from `SHOT 5.mp4`) | 0.0 → 11.0 | The turn back, left → right. Mirrored, eased speed ramp. |
 | 09 | 68–75 | 7 | **`HH_S09_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 7.0 | Heading right. Not mirrored, 1.3× punch-in. |
-| 10 | 75–83 | 8 | **`HH_S10_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 8.0 | Face and eye, heading right. Eye-following crop with a slow push-in. |
-| 11 | 83–91 | 8 | shot 11 take (wide, 35 mm look, from `HH_S11_v02`) | 0.0 → 8.0 | Ends on a frame full of dust (7–8 s). |
+| 10 | 75–83 | 8 | shot 10 take (client version, from `HH_S10_v02`) | 0.0 → 8.0 | Extreme close-up, standing still: he slowly closes and opens his eye in the wind. Eye on the right third. |
+| 11 | 83–91 | 8 | shot 11 take (wide, 50 mm look, from `HH_S11_v03`) | 0.0 → 8.0 | Ends on a frame full of dust (7–8 s). |
 
-All hard cuts. Screen direction holds across every cut: right (03–05 in), left (05 out–08 in), right (08 out–10), head-on (11). For rhythm, cut on a hoof strike: one full stride is 1.8 s in every shot.
+All hard cuts. Screen direction holds across the running shots: right (03–05 in), left (05 out–08 in), right (08 out–09), head-on (11). Shot 10 is a still portrait facing left, which reads as a new moment after shot 09; to keep it facing right, flip `HH_S10_v02` before animating it (the eye then sits on the left third). For rhythm, cut the running shots on a hoof strike: one full stride is 1.8 s in every shot.
 
 ## Shot 08 from the shot 05 take — built: `HH_S08_from_S05.mp4`
 
@@ -39,7 +39,9 @@ Source: `shot 3.mp4`.
 4. No audio. HEVC 10-bit, 2206×946, 24 fps, BT.709.
 5. After upscaling, redo it from the upscaled `shot 3.mp4` with the same numbers scaled up (e.g. at 2× source: crop 3396×1456 at x 740, y 0).
 
-## Shot 10 from the shot 03 take — built: `HH_S10_from_S03.mp4`
+## Shot 10 from the shot 03 take — built: `HH_S10_from_S03.mp4` (replaced)
+
+The client's close-up replaces this clip: shot 10 is now generated from `HH_S10_v02` (still prompt in `HH_S10_STILL_PROMPT.md`, motion prompt in `SEEDANCE_PROMPTS.md`). Keep it only as a fallback.
 
 Source: `shot 3.mp4`, frames 0–191 (**8.0 s**). Shot 09 uses 1.0–8.0 s of the same take right before it, so shot 10 is framed much tighter to read as a new shot.
 
