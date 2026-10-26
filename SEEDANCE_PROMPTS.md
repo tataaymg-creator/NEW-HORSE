@@ -24,6 +24,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 - **v3, shot 11 ending.** From 20 s his hooves throw bigger sprays at the lens; at 22 s a gust drives the whole dust cloud forward over and around him; by 24 s the dust has swallowed him; 24–25 s is a frame completely filled with glowing, moving dust, which you can cut or dissolve out of.
 - **v4, shot 11 reference length.** 25 s lock + 8.3 s gallop ref went over Higgsfield's 30 s limit for attached video. The lock is now `HH_S11_0001-0120` (5 s), 13.3 s in total.
 - **v6, shot 11 wider (from `HH_S11_blocking.blend`).** The camera now opens on the `HH_S11_v01` framing and tracks back an extra 10 m over 0–4 s (eased), then matches his speed, so from 4 s he fills about half the frame height (ears ~24% from the top, hooves ~73%) instead of 90%. The new lock is `HH_S11_wide_0001-0144` (6 s; 14.3 s of reference video in total). The edited blend is `HH_S11_blocking_v02.blend` (saved from Blender 5.2.3 LTS); `HH_S11_apply_wide.py` applies the same change to the original file in any Blender 5.x. The field of view in the prompt now matches the blend camera (69.6 mm = 29° horizontal) instead of 18°.
+- **v7, shot 11 cut to 8 s and widened with a wider lens.** New first frame `HH_S11_v02` (still prompt in `HH_S11_STILL_PROMPT.md`). The client found the belly too big next to the chest: the old 70 mm-from-far-away framing flattened depth, so the barrel read as wide as the chest. The camera now stays at the original ~12 m with a 35 mm lens (blend v03, lock `HH_S11_35mm_0001-0192`): he fills about 45% of the frame height and his chest and shoulders read largest, the body falling away behind. Beats compressed: gallop 0–5 s, dust surge 5–7 s, full dust 7–8 s.
 - **v5, shot 11 light.** The take lit the horse up from inside at 7–9 s and 17–19 s (frame brightness more than doubled) because the prompt had him run through two sun shafts that "flare bright gold" across his chest. Both beats are gone: the sun now stays behind him all shot, he is lit only by a rim, exposure stays even, and the shafts move only in the dust behind him. New beats: the dust rolling through the shafts at 7–10 s, a head toss at 18 s. The dust ending is unchanged apart from a dark, rim-lit silhouette at 23 s.
 
 ## Shot list
@@ -38,7 +39,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 | 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 1146 words / 6416 chars |
 | 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 894 words / 5017 chars |
 | 10 | Very close: the face and eye | 8 | `HH_S10_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 907 words / 5065 chars |
-| 11 | He gallops straight at the camera, head-on | 25 | `HH_S11_v01.png`, `HH_S11_wide_0001-0144.mp4`, `gallop_side_ref.mp4` | 14.3 s | 1470 words / 8177 chars |
+| 11 | He gallops straight at the camera, head-on (wide) | 8 | `HH_S11_v02`, `HH_S11_35mm_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1320 words / 7359 chars |
 
 ## Shot 03 — Medium: head, neck, chest and forelegs, galloping — 8 s
 
@@ -446,33 +447,28 @@ KEEP CONSISTENT
 - One continuous shot, no cuts, no on-screen text.
 ```
 
-## Shot 11 — He gallops straight at the camera, head-on — 25 s
+## Shot 11 — He gallops straight at the camera, head-on (wide) — 8 s
 
 ```text
-HH SHOT 11 — 25 s, 21:9 (2.33:1), one continuous slow-motion shot. Head-on: the grey stallion gallops straight at the camera; the camera tracks back from the opening frame to a wide shot and holds him there until a huge cloud of dust surges at the lens and fills the whole frame.
+HH SHOT 11 — 8 s, 21:9 (2.33:1), one continuous slow-motion shot. Wide head-on: the grey stallion gallops straight at the camera, centred and the same size, until a huge cloud of dust surges at the lens and fills the whole frame.
 
 REFERENCES
-@HH_S11_v01 — THE FIRST FRAME of the clip and the look: the horse head-on, centred, full figure, the black background, the sun shafts behind him, the dust, the grade. The first frame is exactly this image; from it the camera tracks back.
-@HH_S11_wide_0001-0144 — Blender blocking, ONLY for his position and size in frame: the track-back from the first frame to the wide frame over 0–4 s, then the wide size. Ignore its look, rig lines, grid, grey studio and stride speed. Hold the wide framing from 4.0s until the dust covers him.
+@HH_S11_v02 — THE FIRST FRAME of the clip and the look: the horse head-on, centred, wide, the black background, the sun shafts behind him, the dust, the grade. Framing exactly as this image.
+@HH_S11_35mm_0001-0192 — Blender blocking, ONLY for his position and size in frame: centred, a little under half the frame height, the same size for all 8 s. Ignore its look, rig lines, grid, grey studio and stride speed. Hold that framing until the dust covers him.
 @gallop_side_ref — real gallop, side view: ONLY the leg mechanics and the tempo. Same mechanics, seen from the front. Ignore its look and background.
 
 THE HORSE
 Grey Iberian stallion: heavy arched neck, deep chest; near-white coat with fine dark flea-bitten freckles, dark slate-grey muzzle, dark brown eyes, long thick wavy silver-white mane and forelock, full silver-white tail, lower legs shading to dark grey, black hooves. Bare, no tack. 100% matches the reference.
 
 CAMERA
-Lens low at the height of his chest, directly in front of him, 29° field of view: long lens, compressed, shallow focus. Stabilised arm on a tracking vehicle driving backwards ahead of him. From 0.0s to 4.0s it drives faster than he runs and eases back about 10 m, so the frame widens smoothly from the first frame to a wide shot; from 4.0s it matches his speed exactly (about 45 km/h), so he holds that size to the end, only a faint organic float. Focus on his face.
-FRAMING FROM 4.0s: wide and centred; he fills about half the frame height, ears about a quarter down from the top, hooves about three quarters down, both eyes visible; black darkness and sun shafts above and around him, sand in front of him.
+Lens low at the height of his chest and level, exactly on his line of travel, about 12 m in front of him, about 54° horizontal field of view (a 35 mm look): his head, chest and forelegs read largest and his body falls away smaller behind them. Stabilised arm on a tracking vehicle driving backwards ahead of him at exactly his speed (about 45 km/h), so he holds the same size and place, only a faint organic float. Focus on his face.
+FRAMING: wide and centred; he fills a little under half the frame height, ears about a quarter down from the top, hooves about 70% down; black darkness and sun shafts above him, dark space and rolling dust to both sides, a broad strip of sand in front of him.
 
 ACTION
-0.0–4.0s — The first frame comes alive and the camera tracks back to the wide frame: he gallops straight at the camera; each stride his chest and head rise and dip, the forelegs fold high toward the lens one after the other and strike, throwing sand forward and sideways; the mane flies out to both sides of his neck and the forelock streams back between his ears.
-4.0–7.0s — A gust sweeps across: the mane lifts high and fans to the right, the dust cloud behind him swirls and spreads and breaks up the light behind him.
-7.0–10.0s — Behind him the dust he has thrown rolls up through the sun shafts: the beams behind him thicken, waver and break into moving streaks. He stays lit only from behind, a thin warm rim round his ears, mane and outline.
-10.0–14.0s — Focused, ears pricked forward, both eyes on the camera, nostrils flaring on every breath; sand flung by his forelegs sprays out in front of him and drifts toward the camera.
-14.0–17.0s — At 14.5s his ears flick back and forward again; a stronger gust lifts the mane and blows the dust behind him into a long rolling wave.
-17.0–20.0s — At 18.0s he tosses his head once: the mane flips up over his crest and falls back to both sides, the forelock lifts and drops. The shafts behind him slide and flicker as the dust drifts through them.
-20.0–22.0s — He drives harder: each stride his forelegs hurl bigger sprays of sand toward the camera, and the dust cloud behind him swells and rises higher than his ears, glowing where the sun cuts through it.
-22.0–24.0s — The dust comes for the camera: at 22.0s a powerful gust from behind him drives the whole cloud forward; it rolls over his back and round both sides of him and, with the sand he throws, rolls toward the camera and surges over the lens. The camera keeps the same move. The dust fills the frame from the edges inward: by 23.0s he is a dark silhouette with a thin gold rim inside the dust, by 24.0s he is gone inside it.
-24.0–25.0s — The whole frame is dense, billowing dust, lit from behind so it glows amber and gold; soft out-of-focus grains streak past the lens. The dust keeps rolling and churning to the last frame: the shot ends on a frame completely filled with moving dust.
+0.0–3.0s — The first frame comes alive: he gallops straight at the camera; each stride his chest and head rise and dip, the forelegs fold high one after the other and strike, throwing sand forward and to both sides; the mane flies out to both sides of his neck and the forelock streams back between his ears. At 1.8s a gust lifts the mane and swirls the dust behind him.
+3.0–5.0s — He drives harder: ears pricked forward, nostrils flaring; each stride his forelegs hurl bigger sprays of sand toward the camera, and the dust cloud behind him swells and rises higher than his ears, glowing where the sun cuts through it.
+5.0–7.0s — The dust comes for the camera: at 5.0s a powerful gust from behind him drives the whole cloud forward; it rolls over his back and round both sides of him and, with the sand he throws, rolls toward the camera and surges over the lens. The camera keeps the same move. The dust fills the frame from the edges inward: by 6.0s he is a dark silhouette with a thin gold rim inside the dust, by 7.0s he is gone inside it.
+7.0–8.0s — The whole frame is dense, billowing dust, lit from behind so it glows amber and gold; soft out-of-focus grains streak past the lens. The dust keeps rolling and churning to the last frame: the shot ends on a frame completely filled with moving dust.
 
 GALLOP
 The real four-beat gallop of @gallop_side_ref: hind hooves land one after the other, then the forelegs, the leading foreleg reaching far forward, then a moment of suspension with all four legs gathered under the belly. Once per stride the body rises and falls and the head and neck dip as the forelegs land. Hooves plant, grip and leave deep prints. Muscles ripple under the skin, the skin shudders on each landing, nostrils flare with one breath per stride. He truly travels: the sand streams past under him.
@@ -481,7 +477,7 @@ WIND, MANE, DUST
 The rush of air from his speed plus a gusting wind. The mane streams in thick separate locks back and out to both sides of his neck, rippling in waves from crest to tips, each wave half a beat behind the dip of his head; tips whip and curl, flyaway hairs glow in the backlight, locks cross and separate all the time. The forelock flutters. Hoof strikes throw sand that arcs up and falls back, plain grains and clods that break apart into dust; the fine dust hangs, rolls away behind him and the gusts tear it into streamers. Dust in three depths: soft grains drifting past the lens, rolling clouds around him, thin haze far back in the dark.
 
 LIGHT IN MOTION
-The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The shafts stand behind him, between him and the far darkness; with the camera retreating they drift slowly, and the dust he throws keeps churning through them. The sun stays behind him the whole shot, so he is lit only from behind: a thin warm rim on his outline, mane and ears, his face and chest in soft, even light exactly as in @HH_S11_v01. Backlit mane strands catch the light and flicker as they move. In the last seconds the dust thickens until the sunlight scatters through all of it and the dust glows amber around his dark silhouette.
+The sun shafts are light on moving dust, so they never hold still: as dust rolls through them the beams thicken, thin, shimmer and break up, and motes glitter as they cross them. The shafts stand behind him, between him and the far darkness; with the camera retreating they drift slowly, and the dust he throws keeps churning through them. The sun stays behind him the whole shot, so he is lit only from behind: a thin warm rim on his outline, mane and ears, his face and chest in soft, even light exactly as in @HH_S11_v02. Backlit mane strands catch the light and flicker as they move. In the last seconds the dust thickens until the sunlight scatters through all of it and the dust glows amber around his dark silhouette.
 
 TEMPO
 Real high-speed slow motion at 24 fps, everything slowed equally: one full stride every 1.8 s, the tempo of @gallop_side_ref. Mane, tail, dust and light keep moving at that same slowed rate, fluid in every frame; crisp frames, a trace of motion blur on hooves and flying sand.
@@ -493,11 +489,12 @@ SOUND
 Only: slowed, deep, muffled hoofbeats on each footfall, heavy breathing once per stride, gusting wind, the hiss of thrown sand; as the dust surges over the lens, a deep rushing roar of wind and sand. No music, no voices.
 
 KEEP CONSISTENT
-- After the track-back (0–4 s) he stays centred at the same wide size, about half the frame height, until the dust swallows him between 22.0s and 24.0s.
-- The sun stays behind him all shot: he is lit only from behind, a thin warm rim round his outline, his face and chest in soft, even light exactly as in @HH_S11_v01; his coat reflects light and never glows from within.
+- He gallops straight at the camera, centred, at the same size (a little under half the frame height) until the dust swallows him between 5.0s and 7.0s.
+- His chest and the points of his shoulders are the widest part of him; his ribcage and belly stay behind his chest, narrower and almost hidden, his outline tapering from the shoulders back; a lean, tucked-up belly.
+- The sun stays behind him all shot: he is lit only from behind, a thin warm rim round his outline, his face and chest in soft, even light exactly as in @HH_S11_v02; his coat reflects light and never glows from within.
 - Exposure stays even from frame to frame; the light changes only in the dust and shafts behind him.
 - The shot ends on a frame completely filled with glowing dust that is still moving.
-- Until 22.0s the background is black darkness, sun shafts and dust only, the top of the frame black; from then on the dust fills everything.
+- Until 5.0s the background is black darkness, sun shafts and dust only, the top of the frame black; from then on the dust fills everything.
 - The sand stays plain sand and dust; he is the only living thing in the frame.
 - Mane, tail and dust move in every frame; the sun shafts shimmer and drift in every frame.
 - Eyes open, wet, alive.

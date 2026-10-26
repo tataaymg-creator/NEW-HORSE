@@ -1,6 +1,6 @@
 # HH — edit plan, shots 03–11
 
-Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the first frame of shot 03; add the length of shots 01–02 in front if they exist. Total for shots 03–11: **103 s (1:43)**.
+Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the first frame of shot 03; add the length of shots 01–02 in front if they exist. Total for shots 03–11: **86 s (1:26)**.
 
 ## Cut list
 
@@ -14,7 +14,7 @@ Everything runs at 24 fps and 21:9. Times are seconds on the timeline from the f
 | 08 | 52–63 | 11 | **`HH_S08_from_S05.mp4`** (built from `SHOT 5.mp4`) | 0.0 → 11.0 | The turn back, left → right. Mirrored, eased speed ramp. |
 | 09 | 63–70 | 7 | **`HH_S09_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 7.0 | Heading right. Not mirrored, 1.3× punch-in. |
 | 10 | 70–78 | 8 | **`HH_S10_from_S03.mp4`** (built from `shot 3.mp4`) | 0.0 → 8.0 | Face and eye, heading right. Eye-following crop with a slow push-in. |
-| 11 | 78–103 | 25 | shot 11 take (wide track-back) | 0.0 → 25.0 | Ends on a frame full of dust. |
+| 11 | 78–86 | 8 | shot 11 take (wide, 35 mm look, from `HH_S11_v02`) | 0.0 → 8.0 | Ends on a frame full of dust (7–8 s). |
 
 All hard cuts. Screen direction holds across every cut: right (03–05 in), left (05 out–08 in), right (08 out–10), head-on (11). For rhythm, cut on a hoof strike: one full stride is 1.8 s in every shot.
 
@@ -67,4 +67,4 @@ In the mirrored shot 08 these move to 0.0–1.5 s and 10.7–11.0 s (top, now to
 - **One grain pass over the whole timeline.** The same grain over every shot glues AI shots together better than each shot's own texture.
 - **Flicker:** if a take shimmers, use a light deflicker and keep the strength low. It must not freeze the moving light in the dust, which is what makes these shots read as real.
 - **Sound:** mute all generated audio and build one track for the whole piece: music plus one consistent set of slowed hoofbeats, breathing, wind and sand. The generated sound changes from shot to shot, and it is wrong on any retimed or mirrored clip.
-- **The end:** shot 11 finishes on 1 s of frame-filling dust (24–25 s). Cut or dissolve (about 12 frames) from there into the end card or packshot.
+- **The end:** shot 11 finishes on 1 s of frame-filling dust (7–8 s). Cut or dissolve (about 12 frames) from there into the end card or packshot.
