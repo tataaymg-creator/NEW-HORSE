@@ -19,6 +19,8 @@
     var TITLE_CARD = true;           // the title card (title + credit) before the lines
     var INTRO_DUR = 5;               // title card, seconds
     var PHRASE_DUR = 3;              // each lyric line, seconds
+    var DURATIONS = null;            // seconds per line, e.g. [2, 2, 2, 5]; null: PHRASE_DUR for every line.
+                                     // A shorter line writes and dissolves proportionally faster
     var COLOR = [1, 1, 1];           // the lettering: white
 
     // Layout, as fractions of the comp size
@@ -188,29 +190,29 @@
     }
 
     // Focus in while written; at the end break up like dust, blur, fade.
-    function addRowLife(layer, writeStart, writeDur, t1) {
+    function addRowLife(layer, writeStart, writeDur, t1, outDur) {
         var effects = layer.property("ADBE Effect Parade");
         try {
             effects.addProperty("ADBE Turbulent Displace");
             var td = effects.property(effects.numProperties);
             var amount = td.property("ADBE Turbulent Displace-0002");
-            amount.setValueAtTime(t1 - OUT_DUR, 0);
+            amount.setValueAtTime(t1 - outDur, 0);
             amount.setValueAtTime(t1, px(DUST));
             easeKeys(amount);
             td.property("ADBE Turbulent Displace-0003").setValue(px(DUST) * 1.2);   // size of the turbulence
             var evo = td.property("ADBE Turbulent Displace-0006");
-            evo.setValueAtTime(t1 - OUT_DUR, 0);
+            evo.setValueAtTime(t1 - outDur, 0);
             evo.setValueAtTime(t1, 90);
         } catch (e) {}
         effects.addProperty("ADBE Gaussian Blur 2");
         var blur = effects.property(effects.numProperties).property("ADBE Gaussian Blur 2-0001");
         blur.setValueAtTime(writeStart, px(IN_BLUR));
         blur.setValueAtTime(writeStart + 0.9 * writeDur, 0);
-        blur.setValueAtTime(t1 - OUT_DUR, 0);
+        blur.setValueAtTime(t1 - outDur, 0);
         blur.setValueAtTime(t1, px(OUT_BLUR));
         easeKeys(blur);
         var op = tr(layer, "ADBE Opacity");
-        op.setValueAtTime(t1 - OUT_DUR, 100);
+        op.setValueAtTime(t1 - outDur, 100);
         op.setValueAtTime(t1, 0);
         easeKeys(op);
     }
@@ -226,11 +228,11 @@
         return ctrl;
     }
 
-    function animateControl(ctrl, centre, t0, t1) {
+    function animateControl(ctrl, centre, t0, t1, outDur, settle) {
         var pos = tr(ctrl, "ADBE Position");
         pos.setValueAtTime(t0, [centre[0], centre[1] + px(RISE)]);
-        pos.setValueAtTime(t0 + SETTLE, centre);
-        pos.setValueAtTime(t1 - OUT_DUR, centre);
+        pos.setValueAtTime(t0 + settle, centre);
+        pos.setValueAtTime(t1 - outDur, centre);
         pos.setValueAtTime(t1, [centre[0], centre[1] - px(OUT_RISE)]);
         easeKeys(pos);
         var sc = tr(ctrl, "ADBE Scale");
@@ -239,8 +241,13 @@
     }
 
     // Build one block (title, credit or a lyric line) at centre, scaled, with its rows written from writeStart.
-    function buildBlock(comp, block, scale, centre, label, t0, t1, writeStart, rowWrite, rowStagger) {
+    // timing: optional {speed, out}: speed scales the write, stagger and settle times (1 = as set above), out is the
+    // length of the dissolve.
+    function buildBlock(comp, block, scale, centre, label, t0, t1, writeStart, rowWrite, rowStagger, timing) {
+        var speed = timing ? timing.speed : 1, outDur = timing ? timing.out : OUT_DUR;
         if (block.chain) { rowWrite = CHAIN_WRITE; rowStagger = CHAIN_WRITE; }
+        rowWrite *= speed;
+        rowStagger *= speed;
         var ctrl = addControl(comp, label, centre, t0, t1);
         var layers = [];
         for (var r = 0; r < block.rows.length; r++) {
@@ -253,12 +260,12 @@
             layer.inPoint = t0;
             layer.outPoint = t1;
             var edge = addWriteMask(layer, box, start, rowWrite, feather);
-            addRowLife(layer, start, rowWrite, t1);
+            addRowLife(layer, start, rowWrite, t1, outDur);
             layers.push(layer);
             if (GLINT) layers.push(addGlint(comp, row, scale, name, centre, box, start, rowWrite, edge));
         }
         for (var k = 0; k < layers.length; k++) layers[k].parent = ctrl;
-        animateControl(ctrl, centre, t0, t1);
+        animateControl(ctrl, centre, t0, t1, outDur, SETTLE * speed);
         return ctrl;
     }
 
@@ -277,7 +284,11 @@
     if (!app.project) app.newProject();
     app.beginUndoGroup("HH lyrics (SVG)");
 
-    var total = intro + order.length * PHRASE_DUR;
+    var durs = [], total = intro;
+    for (var q = 0; q < order.length; q++) {
+        durs.push((DURATIONS && DURATIONS[q]) || PHRASE_DUR);
+        total += durs[q];
+    }
     var folder = app.project.items.addFolder(COMP_NAME);
     var comp = app.project.items.addComp(COMP_NAME, WIDTH, HEIGHT, 1, total, FPS);
     comp.parentFolder = folder;
@@ -301,14 +312,16 @@
     for (var b = first; b < DATA.length; b++) if (DATA[b].w > widest) widest = DATA[b].w;
     var ref = (typeof DATA_REF === "number" && DATA_REF > 0) ? DATA_REF : widest;
     var lyricScale = WIDTH * LYRIC_WIDTH / ref;
+    var t1 = intro;
     for (var n = 0; n < order.length; n++) {
         var block = DATA[order[n] + first];
-        var t0 = intro + n * PHRASE_DUR;
-        var t1 = t0 + PHRASE_DUR;
+        var t0 = t1;
+        t1 = t0 + durs[n];
+        var timing = { speed: Math.min(1, durs[n] / PHRASE_DUR), out: Math.min(OUT_DUR, 0.25 * durs[n]) };
         var at = LYRIC_POS[n] || LYRIC_POS[LYRIC_POS.length - 1];
         var centre = [WIDTH * at[0], HEIGHT * at[1]];
         var label = LINE_LABELS[order[n]] || ((n + 1 < 10 ? "0" : "") + (n + 1));
-        buildBlock(comp, block, lyricScale, centre, label, t0, t1, t0 + 0.05, ROW_WRITE, ROW_STAGGER);
+        buildBlock(comp, block, lyricScale, centre, label, t0, t1, t0 + 0.05, ROW_WRITE, ROW_STAGGER, timing);
         addMarker(comp, t0, label);
     }
 
@@ -330,6 +343,6 @@
     comp.openInViewer();
     app.endUndoGroup();
     alert(COMP_NAME + ": " + total + " s, " + WIDTH + "x" + HEIGHT + ", " + FPS + " fps, transparent.\n" +
-          (TITLE_CARD ? "Title card 0-" + INTRO_DUR + " s, then " : "") + order.length + " lines of " + PHRASE_DUR +
-          " s, from the lettering SVG.");
+          (TITLE_CARD ? "Title card 0-" + INTRO_DUR + " s, then " : "") + order.length + " lines (" + durs.join(", ") +
+          " s), from the lettering SVG.");
 })();

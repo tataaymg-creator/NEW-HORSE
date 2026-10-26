@@ -7,9 +7,10 @@ each split into its rows. Blocks are the SVG's top-level groups; shapes outside 
 Usage:
   svg_to_ae.py report LYRICS.svg            print blocks and rows
   svg_to_ae.py jsx LYRICS.svg SCRIPT.jsx    put the shape data into the After Effects script
-  svg_to_ae.py jsx LYRICS.svg SCRIPT.jsx 11,12,14,8s
-                                            only these blocks, in this order (0 title, 1 credit, n+1 line n);
-                                            a trailing s sets that line on one straight line
+  svg_to_ae.py jsx LYRICS.svg SCRIPT.jsx "11.r1+11.r2w1s,11.r2w2+11.r3s,14,8s"
+                                            only these entries, in this order: blocks (0 title, 1 credit,
+                                            n+1 line n), rows (.r2) or words (.r2w1, rightmost first) joined
+                                            with +; a trailing s sets the entry on one straight line
 """
 import json
 import math
@@ -331,15 +332,48 @@ def moved(shapes, dx, dy):
     return [{"v": [(x + dx, y + dy) for x, y in s["v"]], "i": s["i"], "o": s["o"], "closed": s["closed"]} for s in shapes]
 
 
-def straight(block, gap=0.3):
-    """The rows of a block laid out as one straight line: all on the first row's baseline, chained right to
-    left in reading order, gap x the median row height between them. Rows stay separate (written in turn)."""
-    heights = sorted(r["bbox"][3] - r["bbox"][1] for r in block["rows"])
+def words(row, gap=0.14):
+    """The words of a row in reading order (right to left): pieces whose horizontal extents are closer than
+    gap x the row height belong to one word; the space between words is wider than that."""
+    h = row["bbox"][3] - row["bbox"][1]
+    items = sorted(((bbox_of(sh)[0], bbox_of(sh)[2], sh) for sh in row["elements"]), key=lambda t: t[0])
+    groups = []
+    for x0, x1, sh in items:
+        if groups and x0 <= groups[-1]["x1"] + gap * h:
+            groups[-1]["x1"] = max(groups[-1]["x1"], x1)
+            groups[-1]["elements"].append(sh)
+        else:
+            groups.append({"x1": x1, "elements": [sh]})
+    out = []
+    for g in reversed(groups):                    # right to left = reading order
+        out.append({"bbox": union_bbox([{"bbox": bbox_of(sh)} for sh in g["elements"]]), "base": row["base"],
+                    "elements": g["elements"]})
+    return out
+
+
+def part(full, ref):
+    """A part named like 11 (all rows of block 11), 11.r2 (its second row) or 11.r2w1 (first word of that row)."""
+    m = re.fullmatch(r"(\d+)(?:\.r(\d+)(?:w(\d+))?)?", ref)
+    if not m:
+        raise ValueError("bad part " + ref)
+    block = full[int(m.group(1))]
+    if not m.group(2):
+        return [dict(r) for r in block["rows"]]
+    row = block["rows"][int(m.group(2)) - 1]
+    if not m.group(3):
+        return [dict(row)]
+    return [words(row)[int(m.group(3)) - 1]]
+
+
+def straight(parts, gap=0.3):
+    """Parts laid out as one straight line: all on the first part's baseline, chained right to left in reading
+    order, gap x the median part height between them. Parts stay separate rows (written in turn)."""
+    heights = sorted(r["bbox"][3] - r["bbox"][1] for r in parts)
     space = gap * heights[len(heights) // 2]
-    base = block["rows"][0]["base"]
-    right = block["rows"][0]["bbox"][2]
+    base = parts[0]["base"]
+    right = parts[0]["bbox"][2]
     rows = []
-    for r in block["rows"]:
+    for r in parts:
         dx, dy = right - r["bbox"][2], base - r["base"]
         els = [moved(shapes, dx, dy) for shapes in r["elements"]]
         bb = r["bbox"]
@@ -378,14 +412,23 @@ def compact(data, digits=1):
 
 
 def select(full, spec):
-    """Blocks picked by a spec like "11,12,14,8s": block indices top to bottom (0 title, 1 credit, n+1 lyric
-    line n); a trailing s lays that block out as one straight line."""
+    """Blocks for a script, from a spec like "11.r1+11.r2w1s,11.r2w2+11.r3s,14,8s": comma-separated entries,
+    each one or more parts joined with +; a trailing s sets the entry on one straight line. Parts: 11 = block 11
+    (blocks top to bottom: 0 title, 1 credit, n+1 lyric line n), 11.r2 = its second row, 11.r2w1 = the first
+    word (rightmost) of that row. Without s the parts keep their places in the artwork."""
     out = []
     for item in spec.split(","):
         item = item.strip()
         flat = item.endswith("s")
-        b = full[int(item.rstrip("s"))]
-        out.append(straight(b) if flat else b)
+        parts = []
+        for ref in item.rstrip("s").split("+"):
+            parts.extend(part(full, ref))
+        if flat:
+            out.append(straight(parts))
+        else:
+            allb = [r["bbox"] for r in parts]
+            out.append({"bbox": [min(b[0] for b in allb), min(b[1] for b in allb), max(b[2] for b in allb),
+                                 max(b[3] for b in allb)], "rows": parts})
     return out
 
 

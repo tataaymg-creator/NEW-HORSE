@@ -103,14 +103,14 @@ Built from `lyrics_svg/lyrics_svg.svg` (your lettering), so no font is needed. R
 
 ### Extra lines — `HH_Lyrics_SVG_Extra_AE.jsx`
 
-A separate comp, `HH_Lyrics_SVG_Extra`: 12 s, transparent, same lettering size and motion as the main lyric comp. Four lines, each on screen alone for 3 s, one after the other:
+A separate comp, `HH_Lyrics_SVG_Extra`: 11 s, transparent, same lettering size and motion as the main lyric comp. Each entry is on screen alone, one after the other:
 
-| Time | Line |
-|---|---|
-| 0–3 | من قوباسك ما يعرف عزمك الانهيار |
-| 3–6 | وما كل كفٍ يهز القلب تلويحها |
-| 6–9 | على خطى فكرتك تضوي مصابيحها |
-| 9–12 | إللي تسابق على مضمارها ريحها, on one straight line, written as one continuous stroke |
+| Time | Entry | Layout |
+|---|---|---|
+| 0–2 | من قوباسك ما | one line (row 1 of line 10 plus the word «ما») |
+| 2–4 | يعرف عزمك الانهيار | one line (the word «يعرف» plus row 3 of line 10) |
+| 4–6 | على خطى فكرتك تضوي مصابيحها | its three rows, as in the artwork |
+| 6–11 | إللي تسابق على مضمارها ريحها | one line, written as one continuous stroke |
 
-- All four are centred (`LYRIC_POS`); move each to the dark space of the shot it goes over. `ORDER` (e.g. `[3, 0, 1, 2]`) reorders them without regenerating.
-- Regenerate after changing the SVG: `python3 tools/svg_to_ae.py jsx lyrics_svg/lyrics_svg.svg HH_Lyrics_SVG_Extra_AE.jsx 11,12,14,8s` (block numbers top to bottom: 0 title, 1 credit, line n = n+1; a trailing `s` sets that line on one straight line).
+- The 2 s entries write, settle and dissolve proportionally faster (write 0.4–0.9 s, hold, 0.5 s dissolve). Durations are in `DURATIONS`, positions in `LYRIC_POS` (all centred for now), and `ORDER` reorders the entries.
+- Regenerate after changing the SVG: `python3 tools/svg_to_ae.py jsx lyrics_svg/lyrics_svg.svg HH_Lyrics_SVG_Extra_AE.jsx "11.r1+11.r2w1s,11.r2w2+11.r3s,14,8s"`. Entries are separated by commas; parts are blocks (0 title, 1 credit, line n = n+1), rows (`.r2`) or words (`.r2w1`, rightmost first) joined with `+`; a trailing `s` sets the entry on one straight line.
