@@ -69,3 +69,18 @@ In the mirrored shot 08 these move to 0.0–1.5 s and 10.7–11.0 s (top, now to
 - **Flicker:** if a take shimmers, use a light deflicker and keep the strength low. It must not freeze the moving light in the dust, which is what makes these shots read as real.
 - **Sound:** mute all generated audio and build one track for the whole piece: music plus one consistent set of slowed hoofbeats, breathing, wind and sand. The generated sound changes from shot to shot, and it is wrong on any retimed or mirrored clip.
 - **The end:** shot 11 finishes on 1 s of frame-filling dust (7–8 s). Cut or dissolve (about 12 frames) from there into the end card or packshot.
+
+## Lyric overlay — `HH_Lyrics_AE.jsx`
+
+Run it in After Effects (File > Scripts > Run Script File…). It builds the comp `HH_Lyrics`: 2206×946, 24 fps, 44 s, transparent, white text, font «ديوان مد» (change `FONT` at the top of the script, or run `HH_Lyrics_SetFont.jsx` to swap the font on every line).
+
+| Time | Text | Where |
+|---|---|---|
+| 0–5 | هامة المجد / كلمات الشيخ محمد بن راشد آل مكتوم | Right half, upper part: shot 02's title space (0–5 s on the timeline) |
+| 5–44 | 13 lyric lines, 3 s each | Centred in the lower part of the frame, from the start of shot 03 |
+
+- Each line: words appear in reading order out of a soft blur, rising slightly into place (0.9 s); a slow 2% push while it holds; then it dissolves upward with a blur (last 0.6 s). The title gets a warm gold glint passing through it at 2.0–3.4 s.
+- A soft dark halo (Drop Shadow at 0 distance) sits in the alpha so the white text stays readable over bright dust. Turn it off with `SHADOW = false`.
+- Render: the comp goes into the Render Queue with the "High Quality with Alpha" output module. Lay the result over the edit starting at shot 02. Each line also has a comp marker, so you can slide lines to the music.
+- Arabic needs Preferences > Type > Text Engine > South Asian and Middle Eastern (restart After Effects). If the words appear left to right, set `REVEAL_REVERSED = true` and run again.
+- For the upscaled final, set `WIDTH`/`HEIGHT` (e.g. 3840×1646) and run again: sizes and positions are fractions of the frame.
