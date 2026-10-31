@@ -16,14 +16,17 @@ FRAME
 Black void above, a floor of churned brown sand across the bottom quarter. He runs through the middle of the frame: ears near the top of the middle half, hooves on the sand at its bottom. The space above him stays empty black.
 
 ACTION
-0.0–1.5s — The empty frame: dust drifts slowly through the sun shafts.
-1.5–2.5s — His head and streaming mane enter from the left edge, then his whole body, at a full slow-motion gallop.
+0.0–1.5s — The empty frame is calm and still: no wind, no flying dust, the sand undisturbed; only a few faint motes hang almost motionless in the sun shafts. The slowed sound of his hoofbeats approaches from the left.
+1.5–2.5s — He brings the movement with him: his head and streaming mane enter from the left edge, then his whole body, at a full slow-motion gallop; the air he pushes ahead of him stirs the hanging motes, and the first sand sprays up from his hooves.
 2.5–5.0s — He crosses the frame without slowing, about one stride every 1.8 s; each hoof strike throws sand and clods, dust rolls up behind him; his mane streams back and up, his neck visible under it.
 5.0–6.0s — He runs out through the right edge, his tail last.
-6.0–8.0s — The frame is empty again: the dust he left behind rolls, thins and drifts through the light.
+6.0–8.0s — The frame is empty again: only the dust he kicked up is moving, a trail along his path drifting slowly to the right after him, thinning and settling back onto the sand.
+
+PHYSICS
+All the movement comes from him: before he arrives the air is still; the dust, the flying sand and the moving air exist only where he has run, and settle after he is gone.
 
 LIGHT IN MOTION
-The golden backlight rims his mane, back and legs as he passes; the sun shafts shimmer and thicken as his dust rolls through them. His coat never glows.
+The golden backlight rims his mane, back and legs as he passes; the sun shafts are faint and still until his dust rolls into them, then they thicken and shimmer. His coat never glows.
 
 TEMPO
 Real high-speed slow motion at 24 fps, the same tempo as the rest of the film.
