@@ -9,11 +9,14 @@ HH INTRO — 8 s, 21:9, one continuous slow-motion shot, locked-off camera. The 
 
 REFERENCES
 @HH_INTRO_empty — THE FIRST FRAME: the empty wide frame, exactly this framing for the whole shot.
-@HH_INTRO_ref — the horse, the framing, the light and the environment exactly as this image: the same white horse, the same distance and size in the frame, the same black void and churned brown sand floor, the same warm golden backlight.
+@HH_INTRO_ref — ONLY the look of the horse and the light: the same white horse, the same warm golden backlight. Not his size: here he is much further away and much smaller.
 @gallop_side_ref — ONLY the gallop: leg mechanics, the rise and fall of the body and the tempo. It runs screen-left; mirror it, he runs screen-right. Ignore its look and background.
 
 CAMERA
-A wide shot from far away, locked off on a heavy tripod, exactly the framing of @HH_INTRO_empty and @HH_INTRO_ref: no pan, no tilt, no zoom, no push-in; the frame never follows him. He is small in the frame: his whole body from ears to hooves about a third of the frame height, wide black space above him, the sand floor across the bottom of the frame. Never a close-up.
+Locked off on a heavy tripod, exactly the framing of @HH_INTRO_empty for all 8 s: no pan, no tilt, no zoom, no push-in; the frame never follows him.
+
+DISTANCE
+He is far away from the camera, deep in the background: he runs along the far edge of the sand, where the sand meets the black, his hooves on that line. He looks small: his whole body, ears to hooves, about a quarter of the frame height, and his body length about a fifth of the frame width. All the sand in front of him, between him and the camera, stays empty and undisturbed. He never comes closer to the camera; never a close-up, never a medium shot.
 
 ACTION
 0.0–1.5s — The empty frame, completely still: clean black air, no dust, no sand in the air, the sand floor undisturbed.
@@ -38,7 +41,7 @@ SOUND
 Slowed muffled hoofbeats coming in from the left and fading out to the right, breathing. No music, no voices.
 
 KEEP CONSISTENT
-- The camera never moves and stays wide; he stays small in the frame; only he moves, left to right.
+- The camera never moves; he stays far away and small, on the far edge of the sand, running parallel to the camera; only he moves, left to right.
 - He never stops or turns; he leaves the frame completely.
 - Clean air: no dust clouds at any time.
 - One horse only, no people; one continuous shot, no on-screen text.
