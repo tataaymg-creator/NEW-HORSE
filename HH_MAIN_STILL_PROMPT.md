@@ -61,3 +61,15 @@ He sits in the middle half of the frame: the top quarter above him is empty blac
 
 Deep black void, warm golden backlight rimming his mane and neck, sun shafts through drifting dust, churned brown sand. Photoreal, 21:9.
 ```
+
+## Wide version — same picture, him much further away
+
+Attach `HH_MAIN_v01` (and the character sheet `HH_horse_sheet` if the horse drifts).
+
+```text
+The same photograph as @HH_MAIN_v01, the same white horse, light, dust and sand, but the camera much further back on a long lens. Side view, he gallops to the right, his mane streaming back and up, sand and dust kicked up behind his hooves.
+
+His whole body is in the frame, from his ears to his hooves, small in the middle of the frame: wide empty black above him, a broad strip of churned brown sand below him, open dark space in front of him on the right and behind him on the left.
+
+Deep black void, warm golden backlight rimming his mane and back, faint sun shafts through drifting dust. Photoreal, 21:9.
+```
