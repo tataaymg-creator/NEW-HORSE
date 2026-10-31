@@ -51,3 +51,13 @@ LIGHT: warm 3500K low sun from behind and above him: a thin gold rim on the ears
 
 LOOK: black void background, deep clean blacks, white coat with full detail, warm amber dust, punchy contrast, fine natural grain, photoreal live-action photograph. 21:9, 2688×1152.
 ```
+
+## Short version — horse further away, empty above and below
+
+```text
+Photoreal side view of the white horse from @HH_horse_sheet galloping to the right in slow motion, seen from further away on an 85 mm lens. His mane streams back and up in the wind, his whole neck visible.
+
+He sits in the middle half of the frame: the top quarter above him is empty black, the bottom quarter below his head and neck is only his chest, legs and the sand. The left edge cuts his body just behind the withers; the open black space is in front of him on the right.
+
+Deep black void, warm golden backlight rimming his mane and neck, sun shafts through drifting dust, churned brown sand. Photoreal, 21:9.
+```
