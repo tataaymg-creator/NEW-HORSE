@@ -27,6 +27,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 - **v10, shot 11 new still and 50 mm.** The v02 still was long-legged, but the close 35 mm lens made his head about 38% of his height, which reads as short and squat. New still `HH_S11_v03` (`HH_S11_STILL_PROMPT.md`): a 50 mm look from about 10 m, one foreleg planted straight, explicit proportions. Blend v05 keeps the same pull-out with the lens and distances scaled (11.0 m to 28.6 m): 80% of the frame height at the start, 49% at 3 s, 38% at 5 s, 28% at 8 s. Lock `HH_S11_pullout50_0001-0192`.
 - **v9, shot 11 proportions.** The first pull-out take did not start on `HH_S11_v02` and redrew him stocky: shorter, thicker legs, big hooves, a wider body. The prompt had asked for his head, chest and forelegs to read largest and his chest and shoulders to be the widest part of him, and the shared horse block says heavy neck, deep chest. Shot 11 now has its own horse block with the still's build (legs as long as the body is deep, slender cannons, small hooves) and a lock line that he only gets smaller, never shorter. Put `HH_S11_v02` in the start-frame slot, and set the duration to 8 s.
 - **v8, shot 11 pull-out.** The new still `HH_S11_v02` came out with him filling about 82% of the frame height (chest dominant, belly hidden: the client note is solved). The camera now starts on that framing and pulls away faster than he runs: 35 mm, camera 1.48 m high, from 7.9 m to 20 m (horse root) with a 1 s ease-in. He shrinks to ~50% of the frame height by 3 s, ~38% by 5 s, ~29% by 8 s. Blend v04 (`HH_S11_apply_pullout.py`), lock `HH_S11_pullout_0001-0192`.
+- **v16, shot 10 new horse.** The horse block now describes the new clean white horse with no freckles.
 - **v15, shot 10 matched to the final still.** Framing written from the final `HH_S10_v03`: eye at 84% across, 33% down, forelock wisps along the top of the face, the nose reaching the bottom edge at about a third across, everything left of it empty for titles.
 - **v14, shot 10 moved right for titles.** The reframe also moves him right: the eye at about 83% across and 33% down, his head in the right half, the left half empty darkness for the text.
 - **v13, shot 10 eye on the upper third.** The v03 still was reframed (top cut, bottom extended) so the eye sits on the upper-right third, about 67% across and 33% down.
@@ -46,7 +47,7 @@ One prompt per shot, written to be pasted as-is into Seedance 2.5 on Higgsfield.
 | 07 | Very close: two heads, he leads and the dark bay falls behind | 14 | `HH_S07_v01.png`, `HH_S07_0001-0336.mp4`, `gallop_side_ref.mp4` | 22.3 s | 1015 words / 5676 chars |
 | 08 | The turn back: shot 5 mirrored | 11 | `HH_S08_start_v01.png`, `HH_S08_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 1146 words / 6416 chars |
 | 09 | Very close: head and neck, galloping | 7 | `HH_S09_v01.png`, `gallop_side_ref.mp4` | 8.3 s | 894 words / 5017 chars |
-| 10 | Very close: the eye closes and opens (client version, standing) | 8 | `HH_S10_v03` | 0.0 s | 834 words / 4549 chars |
+| 10 | Very close: the eye closes and opens (client version, standing) | 8 | `HH_S10_v03` | 0.0 s | 849 words / 4588 chars |
 | 11 | He gallops straight at the camera, head-on (wide) | 8 | `HH_S11_v03`, `HH_S11_pullout50_0001-0192.mp4`, `gallop_side_ref.mp4` | 16.3 s | 1461 words / 8217 chars |
 
 ## Shot 02 — Close dust plate (title space) — 5 s
@@ -503,7 +504,7 @@ REFERENCES
 @HH_S10_v03 — THE FIRST FRAME of the clip and the look: framing, angle and light exactly as this image.
 
 THE HORSE
-Grey Iberian stallion, standing still: near-white coat with fine dark flea-bitten freckles, dark slate-grey muzzle, dark brown eyes with long pale lashes, long silver-white mane and forelock. Bare, no tack. 100% matches the reference.
+The new white horse, standing still: a clean, almost pure white coat with no freckles and no dark spots, soft grey skin only around the eye and on the muzzle, dark eyes with long pale lashes, long silver-white mane and forelock. Bare, no tack. 100% matches the first frame.
 
 CAMERA
 Locked off on a heavy tripod above his eye line, looking down at his face at about 30°, about 18° field of view (a 100 mm macro look), very shallow focus on the eye. The frame holds still for all 8 s, with only a barely perceptible organic float.

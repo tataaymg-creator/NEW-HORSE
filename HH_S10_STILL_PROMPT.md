@@ -88,3 +88,15 @@ LENS AND LIGHT: 100 mm lens, shallow depth of field, the eye and lashes razor sh
 
 LOOK: exactly the horse in @HH_horse_sheet, bare, no tack. Deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v04 fix — freckles
+
+The freckles come from the v03 still attached as a reference (the old flea-bitten horse). Either clean the result with an edit pass, or generate again without `HH_S10_v03`.
+
+Edit pass (attach the result and `HH_horse_sheet`):
+
+```text
+Same photograph, same framing, same light. Make the horse exactly the horse in @HH_horse_sheet: a clean, almost pure white coat with no freckles and no dark spots anywhere on his face, soft grey skin only around the eye and on the muzzle, the same fine features. Keep everything else exactly.
+```
+
+Regenerate: attach only `HH_horse_sheet` and `HH_environment`, and use v04 with this line in place of the reference sentence: "His head is seen from slightly above, a three-quarter view turned a little toward the camera." Add to LOOK: "a clean, almost pure white coat with no freckles and no dark spots, soft grey skin only around the eye and on the muzzle."
