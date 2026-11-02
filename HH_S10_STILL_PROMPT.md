@@ -72,3 +72,19 @@ THE EYE: open, calm, wet, dark brown, with the horizontal oval pupil, long pale 
 
 LOOK: the same horse as @HH_S10_v01: near-white flea-bitten grey coat with fine dark freckles, dark slate-grey muzzle, dark brown eyes, long silver-white mane and forelock, bare with no tack. Black void background, warm amber-gold dust, deep clean blacks, punchy contrast, full texture in the white coat, fine natural grain. Photoreal live-action photograph. 21:9, 2688×1152.
 ```
+
+---
+
+# Still prompt v04 — new horse, empty space above, below and on the left
+
+Attach: the new horse character sheet as `HH_horse_sheet`, the environment sheet as `HH_environment`, and the v03 still as `HH_S10_v03` (angle and light only).
+
+```text
+Close-up portrait of the white horse from @HH_horse_sheet, standing still in the world of @HH_environment. The same angle and light as @HH_S10_v03, but not its framing: the camera is further back. His head is seen from slightly above, a three-quarter view turned a little toward the camera, his near eye large, sharp and calm.
+
+FRAME: his whole head sits on the right side of the frame, in the middle of the frame height. Above his forelock, a wide band of empty black runs across the whole top of the frame; below his jaw and muzzle, a wide band of empty black runs across the whole bottom. The left half of the frame is empty black with only faint warm dust. His near eye sits right of centre, a little above the middle of the frame.
+
+LENS AND LIGHT: 100 mm lens, shallow depth of field, the eye and lashes razor sharp. Warm low sun from above and behind him: a thin gold rim along the forelock, the lashes, the brow and the bridge of the nose; the rest of his face in soft, low light with full texture; a warm catch-light in the eye. A few dust motes drift in the darkness.
+
+LOOK: exactly the horse in @HH_horse_sheet, bare, no tack. Deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
