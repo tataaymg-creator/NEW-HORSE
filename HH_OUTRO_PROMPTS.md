@@ -26,6 +26,18 @@ He is small in the frame: from hooves to ears about a third of the frame height,
 A clean, almost pure white coat with no freckles, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, bare, no tack. Camera low at the height of his chest, 50 mm lens from far away. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
+## 1c. Still v03 — much further away (save as `HH_OUTRO_v01`)
+
+Attach: `HH_horse_sheet` and `HH_environment`.
+
+```text
+A very wide shot from very far away: the white horse from @HH_horse_sheet galloping straight toward the camera, exactly head-on and centred, a small figure in a vast dark space in the world of @HH_environment. His face and chest square to the camera, his mane streaming back on both sides of his neck, one foreleg reaching forward.
+
+He is tiny in the frame: from hooves to ears only about a sixth of the frame height, in the middle of the frame. Most of the frame is empty: a huge black void above him, and a wide floor of churned brown sand stretching from him all the way to the bottom edge of the frame. Directly behind him, low on the horizon, a warm golden sun glow outlining his whole body with a bright rim; faint golden sun shafts falling from high behind him. A light veil of golden dust rises behind him, low and soft, glowing in the backlight; a little sand thrown up by his hooves.
+
+A clean, almost pure white coat, bare, no tack. Camera low near the ground, 35 mm lens from very far away. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
+
 ## 2. Motion — Seedance, 8 s
 
 Start frame: `HH_OUTRO_v01`. Video reference: `gallop_side_ref` (timing of the legs only). 8 s, 21:9.
