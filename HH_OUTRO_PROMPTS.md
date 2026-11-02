@@ -78,6 +78,20 @@ He is tiny in the frame: from hooves to ears only about a sixth of the frame hei
 A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his mane streaming back on both sides of his neck, bare, no tack. 50 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
+## 1g. Still v07 — head-on, far, a full-grown stallion whose broad chest hides his belly (save as `HH_OUTRO_v01`)
+
+v06 made him look like a foal ("lean, fine, narrow"). Attach: `HH_horse_sheet` and `HH_environment`.
+
+```text
+A very wide shot from very far away, the camera level at eye level, looking straight ahead: the white horse from @HH_horse_sheet galloping straight at the camera, exactly head-on, a small figure in the centre of a vast dark space in the world of @HH_environment. He looks straight into the lens: both eyes equally visible, his face symmetrical, his nose pointing straight at the camera.
+
+HIS SHAPE FROM THE FRONT: a full-grown adult stallion, powerful and athletic, exactly the horse in the character sheet: a broad, deep, muscular chest, strong shoulders, a proud arched neck, a mature head, long strong legs. His broad chest and shoulders hide his body completely: his belly sits directly behind his chest and never shows at the sides. Never a foal, never young or small-boned.
+
+He is tiny in the frame: from hooves to ears only about a sixth of the frame height, his eyes on the frame's centre line. A huge black void above him; below him, a floor of churned brown sand stretching toward the camera to the bottom edge. Behind him, a warm golden glow and faint golden sun shafts from high above; a thin bright rim of light along his ears, mane, neck, shoulders and legs. A light, low veil of golden dust behind him; a little sand thrown up by his hooves.
+
+A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his long mane streaming back on both sides of his neck, bare, no tack. 50 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
+
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
 
 Start frame: the approved still, `HH_OUTRO_v01`. Seedance image reference: `HH_horse_sheet`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
