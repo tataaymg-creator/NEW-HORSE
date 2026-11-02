@@ -1,4 +1,4 @@
-# HH four horses — motion prompt v02 (9 s, the gaps between them stay the same)
+# HH four horses — motion prompt v03 (9 s, locked in the frame from the first frame)
 
 Start frame: the approved four-horse still, named `HH_FOUR_v01`. Seedance video reference: `gallop_side_ref` (runs left like them, no mirroring). 9 s, 21:9.
 
@@ -12,11 +12,13 @@ REFERENCES
 @gallop_side_ref — ONLY the timing of the legs in a gallop; it runs to the left like them. Ignore its body, shape and look.
 
 CAMERA
-Tracking vehicle running alongside at exactly the white horse's speed, side-on and level, 50 mm from far away, steady with a faint organic float. The white horse stays locked where the first frame puts him, a little left of centre, with the wide empty dark space on the left, for all 9 s. The sand slides past to the right beneath them. The framing stays as wide as the first frame; the camera never pushes in.
+The camera is already travelling at exactly their speed in the very first frame: a tracking vehicle running alongside them, side-on and level, 50 mm from far away. There is no moment where the camera stands still and the horses run forward; it never starts late and never catches up. The framing stays as wide as the first frame; the camera never pushes in.
+
+LOCKED IN THE FRAME
+From the first frame to the last, every horse keeps exactly the same place on the screen: the white horse's nose stays at the same spot a little left of centre, the empty dark space on the left stays exactly as wide as in the first frame, and the herd never moves left or right across the frame. The only thing that moves across the frame is the ground: the sand, the hoofprints and the dust slide steadily to the right beneath and behind them, from the first frame on.
 
 ACTION
-0.0–3.0s — The first frame comes alive: four horses at full gallop in deep slow motion, one stride about every 1.8 s, each in its own rhythm, legs never in step, heads rising and dipping at different moments.
-3.0–9.0s — They run on together as one herd: the three dark horses drive hard behind him, necks stretched, ears forward, nostrils wide; the white horse leads, ears forward, mane high. The gaps between the horses stay exactly the same for the whole shot: the bay stays at his shoulder, the black and the chestnut stay where they are behind; nobody gains, nobody falls back. The shot ends mid-stride.
+0.0–9.0s — Four horses at full gallop in deep slow motion, already running in place on the screen from the first frame, one stride about every 1.8 s, each in its own rhythm, legs never in step, heads rising and dipping at different moments. The three dark horses drive hard behind him, necks stretched, ears forward, nostrils wide; the white horse leads, ears forward, mane high. The gaps between them stay exactly the same: the bay at his shoulder, the black and the chestnut behind; nobody gains, nobody falls back. The shot ends mid-stride.
 
 DUST AND SAND
 Every hoof strike throws sand and clods up and back; their dust rises into one long rolling golden wall behind and between their legs, drifting right and up into the sun shafts. All the flying sand comes from their hooves.
@@ -37,7 +39,7 @@ SOUND
 Slowed, deep, muffled hoofbeats of four horses in a rolling rhythm, breathing, wind, the hiss of thrown sand. No music, no voices.
 
 KEEP CONSISTENT
-- The camera tracks the herd; the white horse stays in the same place in the frame and leads.
+- The camera moves with them from the first frame; every horse stays in the same place on the screen for all 9 s; the empty space on the left never shrinks.
 - The order and the gaps between the horses stay exactly the same: white in front, the bay at his shoulder, the black and the chestnut behind.
 - The framing stays wide; the dark space around them stays empty: no walls, no sky, no people.
 - One continuous shot, no cuts, no on-screen text.
@@ -48,7 +50,7 @@ KEEP CONSISTENT
 Prompt:
 
 ```text
-9-second slow-motion side-on tracking shot from far away. A white horse leads a loose herd of three dark horses — a dark bay, a black and a chestnut — galloping to the left across churned brown sand in a dark black void, exactly as in the image. The camera tracks smoothly beside them at the white horse's speed, so the white horse stays in the same place in the frame, a little left of centre with wide empty dark space on the left, while the sand slides past beneath them. The framing stays wide; no zoom, no push-in.
+9-second slow-motion side-on tracking shot from far away. A white horse leads a loose herd of three dark horses — a dark bay, a black and a chestnut — galloping to the left across churned brown sand in a dark black void, exactly as in the image. The camera is already tracking beside them at exactly their speed from the very first frame, so every horse stays in the same place on the screen for the whole shot: the white horse a little left of centre, the empty dark space on the left exactly as wide as in the image from start to end. Only the sand and the dust slide past to the right beneath them. The framing stays wide; no zoom, no push-in.
 
 Deep slow motion, one stride about every 1.8 seconds, each horse in its own rhythm, legs never in step: legs reaching and striking the sand, long manes and tails streaming back in the wind, sand and clods thrown up behind every hoof, their dust rising into one long rolling golden wall behind them. Warm golden backlight rims their manes and backs; the golden sun shafts from above shimmer, thicken and thin as the dust drifts through them.
 
@@ -58,5 +60,5 @@ The dark horses drive hard behind him, the bay at his shoulder; the white horse 
 Negative prompt:
 
 ```text
-fast motion, speed-up, zoom in, push in, close-up, camera shake, cuts, extra horses, fewer horses, foal, rider, saddle, bridle, people, text, freckles on the white horse, morphing, extra legs, deformed legs, horses changing order, horses gaining or falling back, blown-out white coat, glowing horse
+fast motion, speed-up, zoom in, push in, close-up, camera shake, cuts, extra horses, fewer horses, foal, rider, saddle, bridle, people, text, freckles on the white horse, morphing, extra legs, deformed legs, horses changing order, horses gaining or falling back, horses moving across the frame, static camera at the start, camera starting late, blown-out white coat, glowing horse
 ```
