@@ -19,3 +19,29 @@ THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure whit
 
 LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, 50 mm lens from far away, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v02 — loose, natural group; no other white or grey; the bay from the two-horse still is beside him
+
+Same uploads.
+
+```text
+The same place, distance and light as @HH_TWO_v01: a wide side-on shot from far away, the camera level and square to their path. A small loose herd of four horses gallops toward the left edge of the frame in slow motion, small in a big dark space, in clean profile.
+
+THE GROUP: a natural, uneven group, not a neat line: the horses are spread at slightly different distances from the camera and at different gaps, some overlapping, each in its own rhythm.
+- In front: the white horse from @HH_horse_sheet, leading; his nose is the leftmost point of the group.
+- Right beside him, closest to him, half a length behind: exactly the dark bay with the black mane from @HH_TWO_v01.
+- Behind them, scattered: a black horse a little further from the camera, and a copper-red chestnut a little nearer to the camera, trailing at the back.
+The white horse is the only white or light-coloured horse; all the others are dark: bay, black, chestnut.
+
+SIZE: from hooves to ears they are about a third of the frame height. The group sits in the middle of the frame, a little right of centre; most of the frame is the dark world of @HH_environment around them.
+
+FRAME: wide empty black above them; the broad floor of churned brown sand below them, running straight across the frame; open dark space on the left in front of the white horse; behind them on the right, a rolling wall of golden dust kicked up by their hooves.
+
+MOTION FROZEN: legs at different moments of the gallop, never in step; long manes and tails streaming back to the right; sand and clods thrown up behind every hoof.
+
+LIGHT: warm golden backlight from high behind them: a glowing rim on their ears, manes, backs and tails; golden sun shafts falling from the top through their dust.
+
+THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure white coat with no freckles and no dark spots, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle. All four bare, no tack.
+
+LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, 50 mm lens from far away, fine natural grain. Photoreal live-action photograph. 21:9.
+```
