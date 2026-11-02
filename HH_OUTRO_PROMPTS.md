@@ -64,7 +64,10 @@ REFERENCES
 @gallop_side_ref — ONLY the timing of the legs in a gallop; ignore its angle, body, shape and look.
 
 CAMERA
-Eye level, level, exactly the framing of the first frame. From the very first frame the camera travels backward ahead of him at exactly his speed: he stays the same small size in the centre of the frame for the whole shot and never comes closer. The sand slides toward the camera beneath him. No zoom, no push-in.
+Eye level, level, exactly the framing of the first frame. The camera is on a vehicle already driving backward ahead of him at exactly his speed in the very first frame, so the distance between him and the camera never changes. No zoom, no push-in.
+
+LOCKED SIZE AND PLACE
+He is exactly as small and as far away in the last frame as in the first frame. The tips of his ears and his hooves stay at exactly the same heights on the screen for the whole shot; his width on the screen never changes; he stays in the centre. He runs, but he does not grow: like a treadmill shot, he gallops in place on the screen while only the sand slides toward the camera beneath him.
 
 ACTION
 0.0–3.0s — He gallops straight at the camera in deep slow motion, one stride about every 1.8 s: forelegs reaching and striking the sand, head and neck dipping and rising, his mane streaming back on both sides of his neck. Each hoof strike throws a little sand.
@@ -90,7 +93,7 @@ SOUND
 Slowed, deep, muffled hoofbeats coming toward us, breathing, a soft rising wind as the light grows. No music, no voices.
 
 KEEP CONSISTENT
-- He gallops straight at the camera and stays the same small size in the centre of the frame; he never gets closer.
+- He never gets closer and never gets bigger: the same small size and the same distance from the first frame to the last.
 - The dust grows only a little.
 - The light grows from above until it fills the frame.
 - One horse only, no people; one continuous shot, no on-screen text.
@@ -101,13 +104,13 @@ KEEP CONSISTENT
 Prompt:
 
 ```text
-8-second slow-motion shot at eye level. The white horse gallops straight toward the camera, exactly as in the image, while the camera tracks backward ahead of him at exactly his speed from the first frame, so he stays the same small size in the centre of the frame and never gets closer. Deep slow motion, one stride about every 1.8 seconds, his mane streaming back on both sides of his neck, a little sand thrown by each hoof. Over the shot the dust grows a little, a soft golden veil around his legs, and the golden light falling from above him grows stronger and stronger, widening and brightening, until in the last two seconds it swallows him and fills the whole frame with warm golden-white light. Photoreal live-action commercial, deep black void, churned brown sand, fine film grain.
+8-second slow-motion shot at eye level. The white horse gallops straight toward the camera, exactly as in the image, while the camera is already driving backward ahead of him at exactly his speed from the first frame, so the distance never changes: he stays exactly as small and as far away as in the image for the whole shot, his ears and hooves at the same height on the screen, galloping in place on the screen while only the sand slides toward the camera. Deep slow motion, one stride about every 1.8 seconds, his mane streaming back on both sides of his neck, a little sand thrown by each hoof. Over the shot the dust grows a little, a soft golden veil around his legs, and the golden light falling from above him grows stronger and stronger, widening and brightening, until in the last two seconds it swallows him and fills the whole frame with warm golden-white light. Photoreal live-action commercial, deep black void, churned brown sand, fine film grain.
 ```
 
 Negative prompt:
 
 ```text
-fast motion, speed-up, zoom in, push in, horse getting closer, horse growing in the frame, camera shake, cuts, extra horses, rider, saddle, bridle, people, text, morphing, extra legs, deformed legs, heavy dust cloud, flickering light
+fast motion, speed-up, zoom in, push in, horse getting closer, horse growing in the frame, horse approaching the camera, close-up, medium shot, camera shake, cuts, extra horses, rider, saddle, bridle, people, text, morphing, extra legs, deformed legs, heavy dust cloud, flickering light
 ```
 
 ## Old motion v01 (clean air, glow from the horizon)
