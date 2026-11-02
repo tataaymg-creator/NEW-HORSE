@@ -46,3 +46,49 @@ KEEP CONSISTENT
 - Clean air: no dust clouds at any time.
 - One horse only, no people; one continuous shot, no on-screen text.
 ```
+
+## v03 — 8 s, empty for 3 s, he crosses far away, sand and sun shafts
+
+Start frame: the empty plate `HH_INTRO_empty`. Image reference: the wide still with him in it, `HH_INTRO_ref`. Video reference: `gallop_side_ref` (timing of the legs only). 8 s, 21:9.
+
+```text
+HH INTRO — 8 s, 21:9, one continuous slow-motion shot, locked-off camera. The frame is empty and still for 3 s; then the white horse gallops in from the left edge, far from the camera, crosses the frame and leaves through the right edge.
+
+REFERENCES
+@HH_INTRO_empty — THE FIRST FRAME: the empty wide frame, exactly this framing for the whole shot.
+@HH_INTRO_ref — the horse, his size and distance, the sand, the dust and the light exactly as this image: he is this far away and this small in the frame.
+@gallop_side_ref — ONLY the timing of the legs in a gallop. It runs screen-left; mirror it, he runs screen-right. Ignore its body, shape and look.
+
+CAMERA
+Locked off on a heavy tripod, exactly the framing of @HH_INTRO_empty for all 8 s: no pan, no tilt, no zoom, no push-in.
+
+DISTANCE
+He stays far away, exactly as in @HH_INTRO_ref: small in the middle of the frame, running parallel to the camera on the far part of the sand, wide black space above him, the broad sand floor in front of him. He never comes closer to the camera.
+
+ACTION
+0.0–3.0s — The empty frame, completely still: the sand undisturbed, nothing flying in the air. Only the faint golden sun shafts behind, barely shimmering in a thin still haze.
+3.0–4.0s — His head and streaming mane enter from the left edge, then his whole body, at a full slow-motion gallop.
+4.0–7.0s — He crosses the frame without slowing, about one stride every 1.8 s, his long mane and tail streaming back and glowing in the backlight. Each hoof strike throws sand and clods up and back, exactly like @HH_INTRO_ref; a warm trail of dust rolls up behind him and drifts into the sun shafts, which thicken and glow where his dust passes through them.
+7.0–8.0s — He runs out through the right edge, his tail last. Only his dust trail is left, drifting slowly to the right and settling onto the sand.
+
+PHYSICS
+Before he enters, nothing moves: no wind, no flying sand, no dust in the air. All the sand and dust in the shot comes from his hooves, appears only where he has run, and settles after he passes.
+
+LIGHT
+Warm golden backlight from behind and above: a glowing rim on his mane, tail, back and legs as he passes. Faint golden sun shafts in the dark behind him, still at first, then shimmering as his dust rolls into them. His coat never glows from within.
+
+TEMPO
+Real high-speed slow motion at 24 fps: legs, mane, sand, dust and light all slowed equally, fluid in every frame.
+
+LOOK
+Photoreal live-action commercial. Deep black void, churned brown sand, amber-gold dust, golden sun shafts, deep clean blacks, white coat with full texture, fine natural grain. 21:9.
+
+SOUND
+Silence and a faint breeze for 3 s, then slowed muffled hoofbeats coming in from the left and fading out to the right, the hiss of thrown sand. No music, no voices.
+
+KEEP CONSISTENT
+- The camera never moves; he stays far away and small, exactly as in @HH_INTRO_ref.
+- No sand or dust in the air before he enters.
+- He never stops or turns; he leaves the frame completely.
+- One horse only, no people; one continuous shot, no on-screen text.
+```
