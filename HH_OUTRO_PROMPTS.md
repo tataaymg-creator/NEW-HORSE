@@ -89,7 +89,7 @@ HIS SHAPE FROM THE FRONT: a full-grown adult stallion, powerful and athletic, ex
 
 He is tiny in the frame: from hooves to ears only about a sixth of the frame height, his eyes on the frame's centre line. A huge black void above him; below him, a floor of churned brown sand stretching toward the camera to the bottom edge. Behind him, a warm golden glow and faint golden sun shafts from high above; a thin bright rim of light along his ears, mane, neck, shoulders and legs. A light, low veil of golden dust behind him; a little sand thrown up by his hooves.
 
-A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his long mane streaming back on both sides of his neck, bare, no tack. 50 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his long mane streaming back on both sides of his neck, bare, no tack. 75 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
