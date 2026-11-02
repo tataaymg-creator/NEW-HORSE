@@ -2,10 +2,10 @@
 
 For the turn: he runs right with the camera tracking, and before he reaches the right edge he turns around, so his tail ends up toward the right edge, and he gallops back the other way, still tracked.
 
-Attach: `HH_horse_sheet`, `HH_environment`, and the main-angle still `HH_MAIN_v01` (look, light and sand). Save as `HH_TURN_v01`.
+Attach: `HH_horse_sheet` and `HH_environment` only. Save as `HH_TURN_v01`.
 
 ```text
-The same picture as @HH_MAIN_v01, the same white horse, light, sand and dust, but seen from far away: a wide side-on shot, the camera level at the height of his withers, square to his path. The white horse from @HH_horse_sheet gallops to the right in slow motion in clean profile, his long mane streaming back and up, his tail streaming back, sand and clods thrown up behind his hooves.
+A wide side-on shot from far away in the dark world of @HH_environment, the camera level at the height of his withers, square to his path. The white horse from @HH_horse_sheet gallops to the right in slow motion in clean profile, his long mane streaming back and up, his tail streaming back, sand and clods thrown up behind his hooves.
 
 He is small in the frame: his whole body in view, from hooves to ears about a third of the frame height, a little left of centre. Wide empty black above him; the broad floor of churned brown sand below him, running straight across the frame; a wide open dark space ahead of him on the right; behind him on the left, the low dust trail he kicks up.
 
