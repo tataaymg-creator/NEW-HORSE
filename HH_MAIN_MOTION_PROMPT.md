@@ -112,3 +112,51 @@ KEEP CONSISTENT
 - Mane, dust and sun shafts move in every frame.
 - One continuous shot, no cuts, no on-screen text.
 ```
+
+## 4 s test v2 — after take 1 (horse turned heavy, mane collapsed)
+
+Take 1 problems: his body thickened into a heavy draft horse (thick neck, deep barrel), the long mane collapsed flat and short for most of the shot, and the gait went stiff. The chunky grey models in the Blender lock and the gallop reference pulled his shape. v2 drops the lock, tells Seedance to take only the leg timing from the gallop reference, and spells out his build and the mane. Generate at the highest resolution (take 1 was 992×432).
+
+Upload: start frame `HH_MAIN_v01`; video reference `gallop_side_ref` only.
+
+```text
+HH MAIN ANGLE TEST — 4 s, 21:9, one continuous slow-motion tracking shot. The white horse gallops screen-right in a slow-motion gallop; the camera travels beside him at exactly his speed, so he stays in the same place in the frame for all 4 s.
+
+REFERENCES
+@HH_MAIN_v01 — THE FIRST FRAME: the horse, his build, his mane, the framing, the light and the environment exactly as this image, for every frame of the shot.
+@gallop_side_ref — ONLY the timing of the legs in a gallop. It runs screen-left; mirror it, he runs screen-right. Ignore its body, its shape, its proportions, its look and its background completely.
+
+THE HORSE
+Exactly the horse of the first frame for all 4 s: a lean, elegant, athletic white horse, a fine dry head, a long slim arched neck, a compact body with a light barrel, long slim legs with fine joints. He never becomes heavier, thicker or shorter: no thick neck, no deep heavy body, no draft-horse build.
+
+THE MANE
+His long, full, silky mane streams back and up from his neck in the wind in every frame, exactly as long and as lifted as in the first frame, rippling in waves from crest to tips half a beat after each dip of his head, single hairs glowing in the backlight. It never flattens, never lies down on his neck, never gets shorter.
+
+CAMERA
+Tracking vehicle running alongside at his exact speed, 85 mm look, steady with a faint organic float. The frame stays locked to him: no pan, no zoom, no drift; his head and neck stay where the first frame puts them, the left edge cuts his body, the open black space stays in front of him on the right. Only the sand, the dust and the light move past behind and below him.
+
+ACTION
+A smooth, powerful, flowing four-beat gallop, one full stride about every 1.8 s, a little over two strides in the 4 s: the forelegs reach far forward and strike the sand, the hind legs drive far back, the back stretches and gathers in a long rolling wave, the head and neck dip and rise with each stride. Ears forward, eye calm and focused.
+
+DUST
+Each hoof strike throws sand and clods forward and up; warm dust clouds roll back behind him and drift through the light; fine dust glitters in the air.
+
+LIGHT IN MOTION
+Warm low sun from behind and above him. Golden sun shafts fall from high behind him through the dust, never still: as his dust rolls through them the beams thicken, thin, shimmer and break up, and the motes inside them glitter. The gold rim on his mane, ears and the top line of his neck flickers as the hair moves. Exposure stays even; his coat reflects the light and never glows.
+
+TEMPO
+Real high-speed slow motion at 24 fps: legs, mane, dust and light all slowed equally, fluid in every frame.
+
+LOOK
+Photoreal live-action commercial. Deep black void, churned brown sand, amber-gold dust, golden sun shafts, deep clean blacks, white coat with full texture, fine natural grain. 21:9.
+
+SOUND
+Slowed, deep, muffled hoofbeats on each strike, heavy breathing once per stride, wind, the hiss of thrown sand. No music, no voices.
+
+KEEP CONSISTENT
+- The same lean, elegant horse as the first frame in every frame.
+- The long mane streams back and up in every frame.
+- He stays in the same place in the frame; only the gallop moves him up and down.
+- The black space around him stays empty: no walls, no sky, no other horses, no people.
+- One continuous shot, no cuts, no on-screen text.
+```
