@@ -92,6 +92,22 @@ He is tiny in the frame: from hooves to ears only about a sixth of the frame hei
 A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his long mane streaming back on both sides of his neck, bare, no tack. 75 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
+## 1h. Still v08 — the old shot 11 prompt that worked, rewritten: new horse, far away (save as `HH_OUTRO_v01`)
+
+Attach: `HH_horse_sheet` and `HH_environment`.
+
+```text
+The white horse from @HH_horse_sheet galloping dead straight at the camera, exactly head-on and centred, in the dark world of @HH_environment: both eyes equally visible, his nose pointing straight into the lens, his face perfectly symmetrical, his chest square to the camera with both shoulders and both forelegs equally visible, his body hidden directly behind his chest, the mane streaming back evenly on both sides of his neck. The camera is level at his eye height, exactly on his line of travel. The warm golden backlight sits directly behind him, outlining him and the dust behind him.
+
+VERY WIDE FRAME: a very wide shot from far away. He is small in the frame, about a quarter of the frame height: the tips of his ears a little above the middle of the frame, his hooves a little below it, centred left to right. Above him, a huge black darkness with warm sun shafts falling through drifting dust. On both sides of him, wide dark space with soft, low dust clouds rolling out to the left and right. In front of him, a broad floor of loose, churned brown sand running toward the camera to the bottom edge, catching the backlight in its grooves and hoofprints.
+
+LENS AND PERSPECTIVE: shot on a 35 mm lens, so his head, chest and forelegs read as the biggest part of him and his body falls away smaller behind them. His chest and the points of his shoulders are the widest part of his silhouette. His ribcage and belly sit behind the chest, narrower and almost completely hidden, with only a thin sliver of flank showing behind each shoulder; his outline tapers from the shoulders back. He is a fit, athletic, full-grown stallion with a deep chest and a lean, tucked-up belly.
+
+POSE: mid-stride, one foreleg folded high with the knee up, the other reaching down into the sand, sand and clods spraying forward and to both sides from the hooves.
+
+THE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, long silver-white mane, bare, no tack. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
+
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
 
 Start frame: the approved still, `HH_OUTRO_v01`. Seedance image reference: `HH_horse_sheet`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
