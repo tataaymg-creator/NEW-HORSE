@@ -50,6 +50,20 @@ He is tiny in the frame: from hooves to ears only about a sixth of the frame hei
 A clean, almost pure white coat, bare, no tack. 50 mm lens from very far away, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
+## 1e. Still v05 — lean from the front, 40 mm, slightly off-axis (save as `HH_OUTRO_v01`)
+
+Attach: `HH_horse_sheet` and `HH_environment`.
+
+```text
+A very wide shot from very far away, the camera level at eye level, at the height of the horse's eyes, looking straight ahead: the white horse from @HH_horse_sheet galloping toward the camera, a small figure in a vast dark space in the world of @HH_environment. He comes toward the camera turned very slightly off-axis, about 10 to 15 degrees, so one shoulder leads; his face toward the camera, his mane streaming back on both sides of his neck, one foreleg reaching forward.
+
+He is tiny in the frame: from hooves to ears only about a sixth of the frame height, in the middle of the frame, his eyes on the frame's centre line. A huge black void above him; below him, a floor of churned brown sand stretching toward the camera to the bottom edge, seen at a natural standing eye height. Directly behind him, a warm golden sun glow outlining his whole body with a bright rim; faint golden sun shafts falling from high above him. A light veil of golden dust rises behind him, low and soft, glowing in the backlight; a little sand thrown up by his hooves.
+
+A lean, athletic horse: a narrow chest, a slim, tucked-up belly that stays hidden behind his chest and shoulders, long slim legs; seen from the front he looks narrow and light, never wide or heavy. A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, bare, no tack.
+
+40 mm lens from very far away, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
+
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
 
 Start frame: the approved still, `HH_OUTRO_v01`. Seedance image reference: `HH_horse_sheet`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
