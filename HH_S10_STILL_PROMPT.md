@@ -100,3 +100,15 @@ Same photograph, same framing, same light. Make the horse exactly the horse in @
 ```
 
 Regenerate: attach only `HH_horse_sheet` and `HH_environment`, and use v04 with this line in place of the reference sentence: "His head is seen from slightly above, a three-quarter view turned a little toward the camera." Add to LOOK: "a clean, almost pure white coat with no freckles and no dark spots, soft grey skin only around the eye and on the muzzle."
+
+## v05 — plain description of the approved framing (head on the right, facing left)
+
+Attach: `HH_horse_sheet` and `HH_environment` only.
+
+```text
+Portrait of the white horse from @HH_horse_sheet in the dark world of @HH_environment: his head and the top of his neck, a three-quarter view, facing left and turned slightly toward the camera, calm, his near eye dark and sharp.
+
+His head fills the right side of the frame: his ears near the top right, his eye about three quarters across, his muzzle with its small pink patch low in the frame just right of centre, his neck running down to the bottom right corner with the mane falling along it. The left half of the frame is deep black, with a soft warm sun shaft falling from the top and fine gold dust glittering in the dark.
+
+Warm golden backlight from above and behind him: a glowing rim on his ears, forelock, mane and the whiskers of his muzzle; his face in soft, low light with full texture. A clean, almost pure white coat with no freckles and no dark spots, soft grey skin only around the eye and on the muzzle. 100 mm lens, shallow depth of field. Photoreal, deep clean blacks, fine grain. 21:9.
+```
