@@ -26,6 +26,7 @@ HH TURN — 10 s, 21:9, one continuous slow-motion tracking shot from far away. 
 REFERENCES
 @HH_TURN_v01 — THE FIRST FRAME: the horse, the framing, the distance, the light and the environment exactly as this image.
 @HH_horse_sheet — the horse: his face, head and body exactly as this character sheet, in every frame.
+@HH_horse_sheet_flip — the same horse seen from his other side: how he looks after the turn.
 @gallop_side_ref — ONLY the timing of the legs in a gallop. Ignore its body, shape and look.
 
 CAMERA
@@ -35,6 +36,9 @@ ACTION
 0.0–3.5s — He gallops to the right in deep slow motion, one stride about every 1.8 s, his mane streaming back, slowly moving from the centre toward the right side of the frame.
 3.5–6.5s — About three quarters of the way across, before he reaches the right edge, he turns around: he gathers himself, his hind legs dig into the sand, and he swings round in a wide, powerful U-turn toward the camera, his head and neck leading the turn, his mane and tail swinging out wide, sand spraying from his hooves in an arc. For a moment we see him from the front.
 6.5–10.0s — He has turned completely: his tail is toward the right edge of the frame and he gallops away to the left in clean profile, his mane streaming back to the right. The camera tracks with him to the left; he stays the same small size.
+
+AFTER THE TURN
+His head and neck stay exactly the same as before the turn, now seen from his other side: the same fine, long, dry head in proportion to his body, the same ears standing up and forward, the same long arched neck, the same eye and soft grey muzzle with the pink patch, the same long mane streaming back. His head never gets shorter, smaller or boxier; his neck never gets thicker or shorter. He is also exactly as far away and as small as before the turn.
 
 DUST AND SAND
 Every hoof strike throws sand; the turn throws a big arc of sand and a golden dust cloud that drifts and settles behind him. All the flying sand comes from his hooves.
@@ -65,11 +69,11 @@ KEEP CONSISTENT
 Prompt:
 
 ```text
-10-second slow-motion side-on tracking shot from far away, exactly as in the image. The white horse gallops to the right while the camera tracks him a little slower than he runs, so he slowly moves toward the right side of the frame. About three quarters of the way across, before he reaches the right edge, he turns around in a wide, powerful U-turn toward the camera, hind legs digging into the sand, mane and tail swinging out wide, an arc of sand and golden dust spraying from his hooves. After the turn his tail is toward the right edge and he gallops away to the left in profile, and the camera tracks with him to the left. He stays far away and small for the whole shot; deep slow motion, smooth and heavy. Warm golden backlight rims his mane and tail, golden sun shafts shimmer through the dust. Photoreal live-action commercial, deep black void, churned brown sand, fine film grain.
+10-second slow-motion side-on tracking shot from far away, exactly as in the image. The white horse gallops to the right while the camera tracks him a little slower than he runs, so he slowly moves toward the right side of the frame. About three quarters of the way across, before he reaches the right edge, he turns around in a wide, powerful U-turn toward the camera, hind legs digging into the sand, mane and tail swinging out wide, an arc of sand and golden dust spraying from his hooves. After the turn his tail is toward the right edge and he gallops away to the left in profile, and the camera tracks with him to the left. After the turn his head and neck look exactly as before, seen from his other side: the same fine, long head, ears up and forward, the same long arched neck and long mane; he stays exactly as far away and as small as before. He stays far away and small for the whole shot; deep slow motion, smooth and heavy. Warm golden backlight rims his mane and tail, golden sun shafts shimmer through the dust. Photoreal live-action commercial, deep black void, churned brown sand, fine film grain.
 ```
 
 Negative prompt:
 
 ```text
-fast motion, speed-up, zoom in, push in, close-up, camera shake, cuts, horse leaving the frame, horse getting bigger, extra horses, rider, saddle, bridle, people, text, freckles on the horse, morphing, extra legs, deformed legs, sudden turn, blown-out white coat, glowing horse
+fast motion, speed-up, zoom in, push in, close-up, camera shake, cuts, horse leaving the frame, horse getting bigger, extra horses, rider, saddle, bridle, people, text, freckles on the horse, morphing, extra legs, deformed legs, sudden turn, short head, small head, boxy head, thick neck, missing ears, blown-out white coat, glowing horse
 ```
