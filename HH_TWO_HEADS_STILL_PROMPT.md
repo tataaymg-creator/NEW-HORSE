@@ -13,3 +13,19 @@ THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure whit
 
 LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, 85 mm lens, shallow depth of field, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v02 — same picture, camera pulled far back (the place visible around them)
+
+v01 made the white horse small and the bay big, and left no room behind them. Attach `HH_horse_sheet` and `HH_environment` only.
+
+```text
+The same moment as a close-up of two horses galloping side by side to the left, but the camera has pulled far back so we see the place around them. In front, nearer to the camera, the white horse from @HH_horse_sheet; beside him on the far side, a dark bay horse with a black mane, his head just above and behind the white horse's head. The white horse is the closer one and looks slightly larger; the bay is a little smaller behind him. Both in profile facing left, ears forward, their long manes and tails streaming back in the wind and glowing in the backlight.
+
+FRAME: a wide shot of the two horses, their whole bodies in view, in the middle of the frame and a little right of centre. Wide empty black above them; the broad floor of churned brown sand below them; open dark space ahead of them on the left; and behind them on the right, the dust trail they kick up rolling back into the dark. They take up only part of the frame; the dark world of @HH_environment fills the rest.
+
+LIGHT: warm golden backlight from high behind them: a glowing rim on their ears, manes, backs and tails; soft golden sun shafts falling through their dust; sand and clods thrown up from their hooves.
+
+THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure white coat with no freckles and no dark spots, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle. Both horses bare, no tack.
+
+LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, long lens, fine natural grain. Photoreal live-action photograph. 21:9.
+```
