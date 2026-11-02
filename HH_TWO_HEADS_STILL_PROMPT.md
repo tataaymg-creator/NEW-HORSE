@@ -45,3 +45,17 @@ THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure whit
 
 LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, long lens, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v04 — pure side view, running parallel to the frame
+
+```text
+Two horses galloping side by side to the left in slow motion, shot from exactly the side: the camera is level and square to their path, so both run perfectly parallel to the frame in flat, clean profile, neither turned toward nor away from the camera. Seen from far back so we see the place around them. The white horse from @HH_horse_sheet leads and is the nearer one: his head and chest are clearly ahead of the bay. A dark bay horse with a black mane runs right beside him on the far side, half a length behind, his head level with the white horse's neck. Ears forward, their long manes and tails streaming straight back in the wind and glowing in the backlight.
+
+FRAME: a wide side-on shot, their whole bodies in view, in the middle of the frame and a little right of centre. Wide empty black above them; the broad floor of churned brown sand below them, running straight across the frame; open dark space ahead of them on the left; behind them on the right, the dust trail they kick up rolling back into the dark. They take up only part of the frame; the dark world of @HH_environment fills the rest.
+
+LIGHT: warm golden backlight from high behind them: a glowing rim on their ears, manes, backs and tails; soft golden sun shafts falling through their dust; sand and clods thrown up from their hooves.
+
+THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure white coat with no freckles and no dark spots, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle. Both horses bare, no tack.
+
+LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, long lens, fine natural grain. Photoreal live-action photograph. 21:9.
+```
