@@ -1,12 +1,13 @@
 # HH main angle — Seedance motion prompt v01
 
-Start frame: `HH_MAIN_v01.png`. Video reference: `gallop_side_ref.mp4`. 15 s, 21:9.
+Start frame: `HH_MAIN_v01.png`. Video references: `HH_MAIN_lock_0001-0360.mp4` (15 s) or `HH_MAIN_lock_4s.mp4` (4 s test) for the framing lock, and `gallop_side_ref.mp4` for the gallop. Lock made with `HH_MAIN_apply_side.py` on `HH_S11_blocking.blend`, saved as `HH_MAIN_blocking.blend`. 15 s, 21:9.
 
 ```text
 HH MAIN ANGLE — 15 s, 21:9, one continuous slow-motion tracking shot. The white horse gallops screen-right in an endless slow-motion gallop; the camera travels beside him at his speed, so he holds his place in the frame the whole time.
 
 REFERENCES
 @HH_MAIN_v01 — THE FIRST FRAME: horse, framing, light and environment exactly as this image.
+@HH_MAIN_lock_0001-0360 — the camera and framing lock (Blender): ONLY where he sits in the frame and how the camera travels with him, keeping him in the same place while the ground slides past. Ignore the grey model and the floor grid.
 @gallop_side_ref — ONLY the gallop: leg mechanics, the rise and fall of the body and the tempo. It runs screen-left; mirror it, he runs screen-right. Ignore its look and background.
 
 CAMERA
@@ -44,6 +45,7 @@ HH MAIN ANGLE TEST — 4 s, 21:9, one continuous slow-motion tracking shot. The 
 
 REFERENCES
 @HH_MAIN_v01 — THE FIRST FRAME: horse, framing, light and environment exactly as this image.
+@HH_MAIN_lock_4s — the camera and framing lock (Blender): ONLY where he sits in the frame and how the camera travels with him, keeping him in the same place while the ground slides past. Ignore the grey model and the floor grid.
 @gallop_side_ref — ONLY the gallop: leg mechanics, the rise and fall of the body and the tempo. It runs screen-left; mirror it, he runs screen-right. Ignore its look and background.
 
 CAMERA
