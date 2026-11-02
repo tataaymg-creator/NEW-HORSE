@@ -42,18 +42,18 @@ KEEP CONSISTENT
 - One continuous shot, no cuts, no on-screen text.
 ```
 
-## Kling version (10 s: Kling's longest clip)
+## Kling version (15 s)
 
-Image-to-video with the still as the start image. Kling does not take @ references or a video reference, and its clips stop at 10 s, so the timing is squeezed into 10 s; the bay leaves in the last 4 s.
+Image-to-video with the still as the start image, 15 s. Kling takes no @ references or video reference, so everything is in the prompt.
 
 Prompt:
 
 ```text
-Slow-motion side-on tracking shot from far away. The white horse and the dark bay horse gallop side by side to the left across churned brown sand in a dark black void, exactly as in the image: the white horse leads, the bay half a length behind him on the far side. The camera tracks smoothly beside them at the white horse's speed, so the white horse stays in the same place in the frame, small and a little left of centre, while the sand slides past beneath them. The framing stays wide; no zoom, no push-in.
+15-second slow-motion side-on tracking shot from far away. The white horse and the dark bay horse gallop side by side to the left across churned brown sand in a dark black void, exactly as in the image: the white horse leads, the bay half a length behind him on the far side. The camera tracks smoothly beside them at the white horse's speed, so the white horse stays in the same place in the frame, small and a little left of centre, while the sand slides past beneath them. The framing stays wide; no zoom, no push-in.
 
-Deep slow motion, one stride about every 2 seconds: legs reaching and striking the sand, long manes and tails streaming back in the wind, sand and clods thrown up behind every hoof, a warm dust trail rolling back into the dark. Warm golden backlight rims their manes and backs; the golden sun shafts from above shimmer as the dust drifts through them.
+Deep slow motion, one stride about every 1.8 seconds: legs reaching and striking the sand, long manes and tails streaming back in the wind, sand and clods thrown up behind every hoof, a warm dust trail rolling back into the dark. Warm golden backlight rims their manes and backs; the golden sun shafts from above shimmer, thicken and thin as the dust drifts through them.
 
-From the sixth second the bay tires and loses ground: stride by stride he drifts back to the right behind the white horse's tail and runs out of the frame on the right. The white horse never slows. In the last seconds he gallops on alone in the empty dark, his mane streaming, the bay's dust settling behind him.
+For the first nine seconds they run together. From the ninth second the bay tires and loses ground: stride by stride he drifts back to the right behind the white horse's tail and, by the twelfth second, runs out of the frame on the right. The white horse never slows. In the last three seconds he gallops on alone in the empty dark, his mane streaming, the bay's dust settling behind him.
 
 Photoreal live-action commercial, deep clean blacks, amber-gold dust, fine film grain.
 ```
