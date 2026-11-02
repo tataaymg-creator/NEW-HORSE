@@ -59,3 +59,23 @@ THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure whit
 
 LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, long lens, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v05 — side view, white horse leading, written in screen positions
+
+"Leads" and "ahead" were read the wrong way; this version says where each head sits on the screen.
+
+```text
+Two horses galloping side by side toward the left edge of the frame in slow motion, shot from exactly the side: the camera is level and square to their path, both in flat, clean profile.
+
+WHO IS WHERE ON SCREEN: the white horse from @HH_horse_sheet is the lead horse. His nose is the leftmost point of the two horses, his head clearly further left on the screen than the bay's head. The dark bay horse with a black mane is the second horse: his nose sits further right on the screen, level with the white horse's neck, half a length behind. The white horse is also the nearer one to the camera, in front of the bay; the bay is partly hidden behind him.
+
+Ears forward, their long manes and tails streaming straight back to the right in the wind and glowing in the backlight.
+
+FRAME: a wide side-on shot from far back, their whole bodies in view, in the middle of the frame and a little right of centre. Wide empty black above them; the broad floor of churned brown sand below them, running straight across the frame; open dark space on the left in front of the white horse's nose; on the right, behind them, the dust trail they kick up rolling back into the dark. They take up only part of the frame; the dark world of @HH_environment fills the rest.
+
+LIGHT: warm golden backlight from high behind them: a glowing rim on their ears, manes, backs and tails; soft golden sun shafts falling through their dust; sand and clods thrown up from their hooves.
+
+THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure white coat with no freckles and no dark spots, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle. Both horses bare, no tack.
+
+LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, long lens, fine natural grain. Photoreal live-action photograph. 21:9.
+```
