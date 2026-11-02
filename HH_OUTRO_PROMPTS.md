@@ -64,6 +64,20 @@ A lean, athletic horse: a narrow chest, a slim, tucked-up belly that stays hidde
 40 mm lens from very far away, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
 
+## 1f. Still v06 — exactly head-on, far, belly hidden behind the chest (save as `HH_OUTRO_v01`)
+
+Attach: `HH_horse_sheet` and `HH_environment`.
+
+```text
+A very wide shot from very far away, the camera level at eye level, looking straight ahead: the white horse from @HH_horse_sheet galloping straight at the camera, exactly head-on, a small figure in the centre of a vast dark space in the world of @HH_environment. He looks straight into the lens: both eyes equally visible, his face symmetrical, his nose pointing straight at the camera.
+
+HIS SHAPE FROM THE FRONT: we see only his head, his neck, his chest and his forelegs. He is a lean, fine horse whose body is narrower than his chest, so his whole body and belly are hidden directly behind his chest and shoulders; nothing of his belly or barrel shows at the sides. His silhouette is tall and narrow, never wide or round.
+
+He is tiny in the frame: from hooves to ears only about a sixth of the frame height, his eyes on the frame's centre line. A huge black void above him; below him, a floor of churned brown sand stretching toward the camera to the bottom edge. Behind him, a warm golden glow and faint golden sun shafts from high above; a thin bright rim of light along his ears, mane, the edges of his neck and his legs. A light, low veil of golden dust behind him; a little sand thrown up by his hooves.
+
+A clean, almost pure white coat, soft grey skin around the eyes and on the muzzle, a small pink patch on the muzzle, his mane streaming back on both sides of his neck, bare, no tack. 50 mm lens, level camera, no tilt. Deep black void, deep clean blacks, punchy contrast, fine natural grain. Photoreal live-action photograph. 21:9.
+```
+
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
 
 Start frame: the approved still, `HH_OUTRO_v01`. Seedance image reference: `HH_horse_sheet`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
