@@ -52,36 +52,37 @@ A clean, almost pure white coat, bare, no tack. 50 mm lens from very far away, l
 
 ## 2. Motion v02 — 8 s: camera tracks back, he never gets closer, dust grows a little, the light from above fills the frame
 
-Start frame: the approved still, `HH_OUTRO_v01`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
+Start frame: the approved still, `HH_OUTRO_v01`. Seedance image reference: `HH_horse_sheet`. Seedance video reference: `gallop_side_ref` (timing of the legs only).
 
 ### Seedance
 
 ```text
-HH OUTRO — 8 s, 21:9, one continuous slow-motion shot. The white horse gallops straight toward the camera; the camera tracks back ahead of him at exactly his speed, so he never gets closer. The dust around him grows a little, and the golden light falling from above grows stronger and stronger until it fills the whole frame.
+HH OUTRO — 8 s, 21:9, one continuous slow-motion shot. A fixed-distance shot: the white horse stays far away and small in the centre of the frame for all 8 s, exactly as in the first frame, galloping in place on the screen. The golden light falling from above grows until it fills the whole frame.
+
+DISTANCE LOCK — THE MOST IMPORTANT RULE
+He never comes closer and never grows. In the last frame he is exactly as small and as far away as in the first frame: the tips of his ears and his hooves stay at the same heights on the screen, his width on the screen never changes, he stays in the centre. The camera is on a vehicle that is already driving backward in front of him at exactly his speed from the very first frame, so the gap between them never shrinks. Only the sand slides toward the camera beneath him.
 
 REFERENCES
-@HH_OUTRO_v01 — THE FIRST FRAME: the horse, the framing, the distance, the light and the environment exactly as this image.
+@HH_OUTRO_v01 — THE FIRST FRAME: the framing, the distance, the light and the environment exactly as this image.
+@HH_horse_sheet — the horse: his face, head and body exactly as this character sheet, in every frame.
 @gallop_side_ref — ONLY the timing of the legs in a gallop; ignore its angle, body, shape and look.
 
 CAMERA
-Eye level, level, exactly the framing of the first frame. The camera is on a vehicle already driving backward ahead of him at exactly his speed in the very first frame, so the distance between him and the camera never changes. No zoom, no push-in.
-
-LOCKED SIZE AND PLACE
-He is exactly as small and as far away in the last frame as in the first frame. The tips of his ears and his hooves stay at exactly the same heights on the screen for the whole shot; his width on the screen never changes; he stays in the centre. He runs, but he does not grow: like a treadmill shot, he gallops in place on the screen while only the sand slides toward the camera beneath him.
+Eye level, level, exactly the framing of the first frame. No zoom, no push-in, no dolly-in.
 
 ACTION
-0.0–3.0s — He gallops straight at the camera in deep slow motion, one stride about every 1.8 s: forelegs reaching and striking the sand, head and neck dipping and rising, his mane streaming back on both sides of his neck. Each hoof strike throws a little sand.
-3.0–6.0s — The dust grows a little: each stride throws a bit more sand, and a soft golden dust veil rises around his legs and behind him. At the same time the golden light falling from above him starts to grow: the shaft widens and brightens, the dust inside it glows, the rim around his body burns brighter.
-6.0–8.0s — The light from above keeps growing, smoothly and steadily, spreading down and outward until it swallows him and fills the whole frame with warm golden-white light. The last frame is almost pure warm light.
+0.0–3.0s — He gallops in deep slow motion, head-on to the camera, one stride about every 1.8 s: forelegs reaching and striking the sand, head and neck dipping and rising, his mane streaming back on both sides of his neck. Each hoof strike throws a little sand. He stays the same small size.
+3.0–6.0s — The dust grows a little: a soft golden veil rises around his legs and behind him. The golden light falling from above starts to grow: the shaft widens and brightens, the dust inside it glows, the rim around his body burns brighter. He stays the same small size.
+6.0–8.0s — The light from above keeps growing, smoothly and steadily, until it swallows him and fills the whole frame with warm golden-white light. The last frame is almost pure warm light.
 
 DUST
-Only a little more dust than in the first frame, soft and low; it glows in the light and never hides him before the light does.
+Only a little more dust than in the first frame, soft and low; it never hides him before the light does.
 
 LIGHT
-The growing light comes from above him, from the shaft falling at the top of the frame: it brightens smoothly, never flickering, filling the black void with warm light from the top down and outward. His face and body stay readable until the light swallows him.
+The growing light comes from above him, from the shaft at the top of the frame: it brightens smoothly, never flickering, filling the black void with warm light from the top down and outward.
 
 THE HORSE
-Exactly the horse of the first frame: a clean, almost pure white coat, lean and elegant, long mane. Bare, no tack.
+Exactly the horse in @HH_horse_sheet: his face, the shape of his head, his eyes, the soft grey around the eyes and muzzle, the small pink patch on the muzzle, a clean, almost pure white coat, lean and elegant, long mane. His face never changes. Bare, no tack.
 
 TEMPO
 Real high-speed slow motion at 24 fps: legs, mane, sand, dust and light all slowed equally, fluid in every frame.
@@ -90,12 +91,12 @@ LOOK
 Photoreal live-action commercial. Deep black void turning to warm golden light, churned brown sand, deep clean blacks at the start, fine natural grain. 21:9.
 
 SOUND
-Slowed, deep, muffled hoofbeats coming toward us, breathing, a soft rising wind as the light grows. No music, no voices.
+Slowed, deep, muffled hoofbeats, breathing, a soft rising wind as the light grows. No music, no voices.
 
 KEEP CONSISTENT
-- He never gets closer and never gets bigger: the same small size and the same distance from the first frame to the last.
-- The dust grows only a little.
-- The light grows from above until it fills the frame.
+- Fixed distance: he never comes closer and never grows, from the first frame to the last.
+- His face stays exactly the face in @HH_horse_sheet.
+- The dust grows only a little; the light grows from above until it fills the frame.
 - One horse only, no people; one continuous shot, no on-screen text.
 ```
 
