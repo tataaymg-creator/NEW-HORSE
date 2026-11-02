@@ -45,3 +45,15 @@ THE WHITE HORSE: exactly the horse in @HH_horse_sheet: a clean, almost pure whit
 
 LOOK: deep black void, deep clean blacks, warm amber-gold dust, punchy contrast, 50 mm lens from far away, fine natural grain. Photoreal live-action photograph. 21:9.
 ```
+
+## v03 fixes — the last horse looked like a foal; move the group right
+
+Edit pass on the v02 result (attach it and `HH_horse_sheet`):
+
+```text
+Same photograph, same horses, same light and distance. Make the last horse on the right a full-grown adult chestnut stallion, exactly as big and as tall as the other horses, with a strong neck and long legs; never a foal. Move the whole herd to the right so the white horse's nose sits a little left of the centre of the frame and a wider empty dark space opens on the left. Keep everything else exactly.
+```
+
+Or regenerate with v02 and these two changes:
+- SIZE line: "The group sits right of centre: the white horse's nose a little left of the centre of the frame, the herd reaching toward the right edge; a wide empty dark space on the left."
+- Last horse: "a full-grown adult copper-red chestnut stallion, exactly as big and as tall as the others; no foals, no young horses."
